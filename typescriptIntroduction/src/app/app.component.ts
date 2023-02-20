@@ -1,3 +1,4 @@
+import { Product } from './models/product.model';
 import { User } from './models/user.model';
 import { Customer } from './models/customer.model';
 import { Employee } from './models/employee.model';
@@ -24,6 +25,12 @@ export class AppComponent implements OnInit {
 
   user1 = new User(1, 'Danijela', 'danijela@danijela.com', '+381/222222');
   user2 = new User(2, 'Milos', 'milos@milos.com', '+381/3333333');
+
+  product1 = new Product(1, 'Phone', 200, 'Huawei p20');
+  product2 = new Product(2, 'Laptop', 800, 'Honor magic Book');
+  product3 = new Product(3, 'Earbuds', 150, 'Huawei freeBuds 3i');
+  product4 = new Product(4, 'Monitor', 200, 'Samsung SuncMaster');
+  product5 = new Product(5, 'Mouse', 20, 'Logitech');
 
   arrayOfCandidates: Candidate[] = [
     {
