@@ -1,7 +1,8 @@
 import { Customer } from './models/customer.model';
-import { Employee } from './models/mployee.model';
+import { Employee } from './models/employee.model';
 import { Candidate } from './models/candidate.model';
 import { Component, OnInit } from '@angular/core';
+import { Address } from './models/address.model';
 
 @Component({
   selector: 'app-root',
@@ -17,8 +18,8 @@ export class AppComponent implements OnInit {
   employee1 = new Employee(1, 'Petar Petrovic', 'petar@petar.com', '+381/000000', 'Menadzer');
   employee2 = new Employee(2, 'Marko Markovic', 'marko@marko.com', '+381/0001001', 'Menadzer');
 
-  customer = new Customer(1, 'Milan Milakovic', 'milan@milan.com', '+381/101101', 'Kralja Milana', 50 , 'Belgrade', 'Serbia');
-  customer1 = new Customer(2, 'Tamara Petrovic', 'tamara@petrovic.com', '+381/0101010', 'Kneza Milosa', 1, 'Belgrade', 'Serbia');
+  customer = new Customer(1, 'Milan Milakovic', 'milan@milan.com', '+381/101101', new Address('Kralja Milana', 50, 'Belgrad', 'Serbia'));
+  customer1 = new Customer(2, 'Tamara Petrovic', 'tamara@petrovic.com', '+381/0101010', new Address('Kneza Milos', 1, 'Belgrade', 'Serbia'));
 
 
   arrayOfCandidates: Candidate[] = [
