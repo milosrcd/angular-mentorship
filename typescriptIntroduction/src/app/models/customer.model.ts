@@ -1,16 +1,16 @@
-export class Customer {
+import { Address } from './address.model';
+export class Customer extends Address {
   private id: number;
   private name: string;
   private email: string;
   private phone: string;
-  private address: string;
 
-  constructor(id: number, name: string, email: string, phone: string, address: string){
+  constructor(id: number, name: string, email: string, phone: string, street: string, houseNumber: number, city: string, country: string){
+    super(street, houseNumber, city, country);
     this.id = id;
     this.name = name;
     this.email = email;
     this.phone = phone;
-    this.address = address;
   }
 
   customerInfo(): string{
