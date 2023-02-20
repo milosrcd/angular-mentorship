@@ -1,3 +1,4 @@
+import { Employee } from './models/mployee.model';
 import { Candidate } from './models/candidate.model';
 import { Component, OnInit } from '@angular/core';
 
@@ -11,6 +12,9 @@ export class AppComponent implements OnInit {
 
   candidate1 = new Candidate('Marko', 'Petrovic', new Date(1987, 1, 1));
   candidate2 = new Candidate('Aleksandar', 'Djordjevic', new Date(1989, 2, 2));
+
+  employee1 = new Employee(1, 'Petar Petrovic', 'petar@petar.com', '+381/000000', 'Menadzer');
+  employee2 = new Employee(2, 'Marko Markovic', 'marko@marko.com', '+381/0001001', 'Menadzer');
 
   arrayOfCandidates: Candidate[] = [
     {
@@ -32,6 +36,9 @@ export class AppComponent implements OnInit {
     console.log(this.arrayOfCandidates);
     const candidateString = this.printCandidates(this.arrayOfCandidates);
     console.log(candidateString);
+
+    console.log(this.employee1);
+    console.log(this.employee2);
   }
 
   printCandidates(candidates: Candidate[]): string {
