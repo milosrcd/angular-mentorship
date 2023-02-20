@@ -1,3 +1,4 @@
+import { User } from './models/user.model';
 import { Customer } from './models/customer.model';
 import { Employee } from './models/employee.model';
 import { Candidate } from './models/candidate.model';
@@ -21,6 +22,8 @@ export class AppComponent implements OnInit {
   customer = new Customer(1, 'Milan Milakovic', 'milan@milan.com', '+381/101101', new Address('Kralja Milana', 50, 'Belgrad', 'Serbia'));
   customer1 = new Customer(2, 'Tamara Petrovic', 'tamara@petrovic.com', '+381/0101010', new Address('Kneza Milos', 1, 'Belgrade', 'Serbia'));
 
+  user1 = new User(1, 'Danijela', 'danijela@danijela.com', '+381/222222');
+  user2 = new User(2, 'Milos', 'milos@milos.com', '+381/3333333');
 
   arrayOfCandidates: Candidate[] = [
     {
