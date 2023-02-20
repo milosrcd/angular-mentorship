@@ -15,6 +15,13 @@ export class AppComponent implements OnInit{
 
     console.log(candidate1);
     console.log(candidate2);
+
+    const arrayOfCandidates: Candidate[] = [
+      {"firstName": 'Milos', "lastName": 'Radosavljevic', "birthday": new Date(1987, 1, 4)},
+      {"firstName": 'Tamara', "lastName": 'Manojlovic', "birthday": new Date(1987, 4, 1)}
+    ];
+
+    console.log(arrayOfCandidates);
   }
 
 }
