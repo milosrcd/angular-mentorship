@@ -18,6 +18,8 @@ export class AppComponent implements OnInit {
   employee2 = new Employee(2, 'Marko Markovic', 'marko@marko.com', '+381/0001001', 'Menadzer');
 
   customer = new Customer(1, 'Milan Milakovic', 'milan@milan.com', '+381/101101', 'Kralja Milana', 50 , 'Belgrade', 'Serbia');
+  customer1 = new Customer(2, 'Tamara Petrovic', 'tamara@petrovic.com', '+381/0101010', 'Kneza Milosa', 1, 'Belgrade', 'Serbia');
+
 
   arrayOfCandidates: Candidate[] = [
     {
@@ -44,6 +46,7 @@ export class AppComponent implements OnInit {
     console.log(this.employee2);
 
     console.log(this.customer.customerInfo());
+    console.log(this.customer1.getName());
   }
 
   printCandidates(candidates: Candidate[]): string {

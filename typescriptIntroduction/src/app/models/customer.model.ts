@@ -16,4 +16,8 @@ export class Customer extends Address {
   customerInfo(): string{
     return `My name is: ${this.name}. You can contact me via email ${this.email} or phone ${this.phone}`
   }
+
+  getName(): string{
+    return this.name;
+  }
 }
