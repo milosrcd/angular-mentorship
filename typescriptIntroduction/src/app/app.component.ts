@@ -1,3 +1,4 @@
+import { BaseEntity } from './models/baseEntity.model';
 import { Product } from './models/product.model';
 import { User } from './models/user.model';
 import { Customer } from './models/customer.model';
@@ -32,6 +33,16 @@ export class AppComponent implements OnInit {
   product4 = new Product(4, 'Monitor', 200, 'Samsung SuncMaster');
   product5 = new Product(5, 'Mouse', 20, 'Logitech');
 
+
+  productBaseEnt = new Product(6, 'modem', 50, 'cisco');
+  userBaseEnt = new User(3, 'Jelena', 'jelena@jelena.com', '+381/444444');
+  customerBaseEnt = new Customer(3, 'Marija Petrovic', 'marija@marija.com', '+381/555555', new Address('Pere Cetkovica', 1, 'Belgrade', 'Serbia'));
+  employeeBaseEnt = new Employee(3, 'Stefan Lazic', 'stefan@stefan', '+381/555333', 'Team Leader');
+
+  baseEntity: BaseEntity = {
+    id: 1
+  }
+
   arrayOfCandidates: Candidate[] = [
     {
       firstName: 'Milos',
@@ -58,6 +69,9 @@ export class AppComponent implements OnInit {
 
     console.log(this.customer.customerInfo());
     console.log(this.customer1.getName());
+
+    console.log(this.baseEntity);
+    console.log('Classes are the fundamental entities used to create reusable components. It is a group of objects which have common properties. It can contain properties like fields, methods, constructors, etc. An Interface defines a structure which acts as a contract in our application.')
   }
 
   printCandidates(candidates: Candidate[]): string {
