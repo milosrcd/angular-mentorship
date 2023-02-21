@@ -89,7 +89,10 @@ export class AppComponent implements OnInit {
     title: 'Personal Trainer',
     description: 'conducting fitness assessments to establish client fitness and skill level - holding one-on-one or group sessions with clients - identifying goals and creating',
     workHours: 4,
-    pricePerHour: 20
+    pricePerHour: 20,
+    getSallary: function (): number {
+      throw new Error('Function not implemented.');
+    }
   }
 
   jobInterface2: Job = {
@@ -97,7 +100,10 @@ export class AppComponent implements OnInit {
     title: 'Professional Limo driver',
     description: 'Drives clients to their destination or event and picks them up at the scheduled time. Maintains records of travel time and expenses for each trip. Inspects the cleanliness of the limousine and confirms it has the food or drinks requested by the client.',
     workHours: 8,
-    pricePerHour: 15
+    pricePerHour: 15,
+    getSallary: function (): number {
+      throw new Error('Function not implemented.');
+    }
   }
 
   arrayOfCandidates: Candidate[] = [
@@ -117,6 +123,10 @@ export class AppComponent implements OnInit {
   productSayHello = new Product(14, 'phone', 200, 'samsung s20');
   customerSayHello = new Customer(22, 'Petar', 'petar@petar.com', '+381/454545', new Address('Despota Stefana', 5, 'Belgrade', 'Serbia'));
   employeeSayHello = new Employee(4, 'Milica', 'milica@milica.com', '+381/6868680', 'Data Analyst');
+
+  jobClassInstace1 = new Job(1, 'Car mechanic', 'Repair and maintain machines and engines', 8, 30);
+  jobClassInstace2 = new Job(2, 'Courier', 'Delivering packages to the recipient. Taking responsibility for high-value or confidential items. Accepting payments for the items. Filling out paperwork about completed deliveries.', 8, 10);
+
 
   ngOnInit(): void {
     console.log(this.candidate1);
@@ -148,6 +158,9 @@ export class AppComponent implements OnInit {
 
     console.log(this.jobInterface1);
     console.log(this.jobInterface2);
+
+    console.log(this.jobClassInstace1.getSallary());
+    console.log(this.jobClassInstace2.getSallary());
   }
 
   printCandidates(candidates: Candidate[]): string {
