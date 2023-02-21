@@ -1,3 +1,4 @@
+import { Book } from './models/book.model';
 import { Post } from './models/post.model';
 import { BaseEntity } from './models/baseEntity.model';
 import { Product } from './models/product.model';
@@ -62,6 +63,26 @@ export class AppComponent implements OnInit {
     numberOfLikes: 150
   }
 
+  bookInterface1: Book = {
+    id:1,
+    title: 'The Hobbit',
+    description: 'The Hobbit, or There and Back Again',
+    dateCreated: new Date(1937, 8 , 1),
+    author: 'J. R. R. Tolkien',
+    numberOfStars: 5,
+    category: 'Fantasy'
+  }
+
+  bookInterface2: Book = {
+    id:2,
+    title: 'The Lord of the Rings',
+    description: 'The Hobbit, The Fellowship of the Ring',
+    dateCreated: new Date(1959, 6 , 1),
+    author: 'J. R. R. Tolkien',
+    numberOfStars: 5,
+    category: 'Fantasy'
+  }
+
   arrayOfCandidates: Candidate[] = [
     {
       firstName: 'Milos',
@@ -104,6 +125,9 @@ export class AppComponent implements OnInit {
 
     console.log(this.postInterface1);
     console.log(this.postInterface2);
+
+    console.log(this.bookInterface1);
+    console.log(this.bookInterface2);
   }
 
   printCandidates(candidates: Candidate[]): string {
