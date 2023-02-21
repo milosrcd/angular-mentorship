@@ -1,3 +1,4 @@
+import { DateFormats } from './enums/dateFormats.enum';
 import { Job } from './models/job.model';
 import { Book } from './models/book.model';
 import { Post } from './models/post.model';
@@ -127,6 +128,7 @@ export class AppComponent implements OnInit {
   jobClassInstace1 = new Job(1, 'Car mechanic', 'Repair and maintain machines and engines', 8, 30);
   jobClassInstace2 = new Job(2, 'Courier', 'Delivering packages to the recipient. Taking responsibility for high-value or confidential items. Accepting payments for the items. Filling out paperwork about completed deliveries.', 8, 10);
 
+  date = new Date("2023-02-21");
 
   ngOnInit(): void {
     console.log(this.candidate1);
@@ -161,6 +163,10 @@ export class AppComponent implements OnInit {
 
     console.log(this.jobClassInstace1.getSallary());
     console.log(this.jobClassInstace2.getSallary());
+
+    console.log(this.formatDate(this.date, DateFormats.YYYYMMDD));
+    console.log(this.formatDate(this.date, DateFormats.DDMMYYYY));
+    console.log(this.formatDate(this.date, DateFormats.MMDDYYYY));
   }
 
   printCandidates(candidates: Candidate[]): string {
@@ -175,4 +181,22 @@ export class AppComponent implements OnInit {
       )
       .join(' \n');
   }
+
+  formatDate(date: Date, dateFormat: DateFormats): string {
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day = date.getDay();
+
+    switch (dateFormat) {
+      case DateFormats.YYYYMMDD:
+        return `${year}-${month}-${day}`
+      case DateFormats.DDMMYYYY:
+        return `${day}/${month}/${year}`
+      case DateFormats.MMDDYYYY:
+        return `${month}-${day} ${year}`
+    }
+  }
+
+
+
 }
