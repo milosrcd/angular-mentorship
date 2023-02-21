@@ -1,3 +1,4 @@
+import { Job } from './models/job.model';
 import { Book } from './models/book.model';
 import { Post } from './models/post.model';
 import { BaseEntity } from './models/baseEntity.model';
@@ -55,8 +56,8 @@ export class AppComponent implements OnInit {
     numberOfLikes: 50
   }
 
-  postInterface2: Post ={
-    id:2,
+  postInterface2: Post = {
+    id: 2,
     title: 'Photo',
     description: 'Photo is posted',
     dateCreated: new Date(2023, 0, 12),
@@ -64,23 +65,39 @@ export class AppComponent implements OnInit {
   }
 
   bookInterface1: Book = {
-    id:1,
+    id: 1,
     title: 'The Hobbit',
     description: 'The Hobbit, or There and Back Again',
-    dateCreated: new Date(1937, 8 , 1),
+    dateCreated: new Date(1937, 8, 1),
     author: 'J. R. R. Tolkien',
     numberOfStars: 5,
     category: 'Fantasy'
   }
 
   bookInterface2: Book = {
-    id:2,
+    id: 2,
     title: 'The Lord of the Rings',
     description: 'The Hobbit, The Fellowship of the Ring',
-    dateCreated: new Date(1959, 6 , 1),
+    dateCreated: new Date(1959, 6, 1),
     author: 'J. R. R. Tolkien',
     numberOfStars: 5,
     category: 'Fantasy'
+  }
+
+  jobInterface1: Job = {
+    id: 1,
+    title: 'Personal Trainer',
+    description: 'conducting fitness assessments to establish client fitness and skill level - holding one-on-one or group sessions with clients - identifying goals and creating',
+    workHours: 4,
+    pricePerHour: 20
+  }
+
+  jobInterface2: Job = {
+    id: 2,
+    title: 'Professional Limo driver',
+    description: 'Drives clients to their destination or event and picks them up at the scheduled time. Maintains records of travel time and expenses for each trip. Inspects the cleanliness of the limousine and confirms it has the food or drinks requested by the client.',
+    workHours: 8,
+    pricePerHour: 15
   }
 
   arrayOfCandidates: Candidate[] = [
@@ -128,6 +145,9 @@ export class AppComponent implements OnInit {
 
     console.log(this.bookInterface1);
     console.log(this.bookInterface2);
+
+    console.log(this.jobInterface1);
+    console.log(this.jobInterface2);
   }
 
   printCandidates(candidates: Candidate[]): string {
