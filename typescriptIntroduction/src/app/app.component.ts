@@ -1,3 +1,4 @@
+import { Post } from './models/post.model';
 import { BaseEntity } from './models/baseEntity.model';
 import { Product } from './models/product.model';
 import { User } from './models/user.model';
@@ -45,6 +46,22 @@ export class AppComponent implements OnInit {
     }
   }
 
+  postInterface1: Post = {
+    id: 1,
+    title: 'Story',
+    description: 'Story is posted',
+    dateCreated: new Date(2023, 1, 21),
+    numberOfLikes: 50
+  }
+
+  postInterface2: Post ={
+    id:2,
+    title: 'Photo',
+    description: 'Photo is posted',
+    dateCreated: new Date(2023, 0, 12),
+    numberOfLikes: 150
+  }
+
   arrayOfCandidates: Candidate[] = [
     {
       firstName: 'Milos',
@@ -84,6 +101,9 @@ export class AppComponent implements OnInit {
     this.productSayHello.sayHello();
     this.customerSayHello.sayHello();
     this.employeeSayHello.sayHello();
+
+    console.log(this.postInterface1);
+    console.log(this.postInterface2);
   }
 
   printCandidates(candidates: Candidate[]): string {
