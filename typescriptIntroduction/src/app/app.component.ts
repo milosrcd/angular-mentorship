@@ -40,7 +40,9 @@ export class AppComponent implements OnInit {
   employeeBaseEnt = new Employee(3, 'Stefan Lazic', 'stefan@stefan', '+381/555333', 'Team Leader');
 
   baseEntity: BaseEntity = {
-    id: 1
+    id: 1,
+    sayHello: function (): void {
+    }
   }
 
   arrayOfCandidates: Candidate[] = [
@@ -55,6 +57,11 @@ export class AppComponent implements OnInit {
       birthday: new Date(1987, 0, 4),
     },
   ];
+
+  userSayHello = new User(10, 'Danijela', 'danijela@danijela.com', '+381/1212121');
+  productSayHello = new Product(14, 'phone', 200, 'samsung s20');
+  customerSayHello = new Customer(22, 'Petar', 'petar@petar.com', '+381/454545', new Address('Despota Stefana', 5, 'Belgrade', 'Serbia'));
+  employeeSayHello = new Employee(4, 'Milica', 'milica@milica.com', '+381/6868680', 'Data Analyst');
 
   ngOnInit(): void {
     console.log(this.candidate1);
@@ -72,6 +79,11 @@ export class AppComponent implements OnInit {
 
     console.log(this.baseEntity);
     console.log('Classes are the fundamental entities used to create reusable components. It is a group of objects which have common properties. It can contain properties like fields, methods, constructors, etc. An Interface defines a structure which acts as a contract in our application.')
+
+    this.userSayHello.sayHello();
+    this.productSayHello.sayHello();
+    this.customerSayHello.sayHello();
+    this.employeeSayHello.sayHello();
   }
 
   printCandidates(candidates: Candidate[]): string {

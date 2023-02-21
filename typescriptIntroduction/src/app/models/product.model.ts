@@ -12,6 +12,9 @@ export class Product implements BaseEntity{
     this.price = price;
     this.description = description;
   }
+  sayHello(): void {
+    console.log('Hellow from Product class');
+  }
 
   getTitle(): string{
     return this.title;
