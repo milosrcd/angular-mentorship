@@ -1,8 +1,6 @@
-export interface Post{
-  id: number;
-  title: string;
-  description: string;
+import { CommonFields } from "./commonFields.model";
+
+export interface Post extends CommonFields{
   dateCreated: Date;
   numberOfLikes: number;
-
 }

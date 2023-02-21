@@ -1,7 +1,6 @@
-export interface Job{
-  id: number,
-  title: string,
-  description: string,
+import { CommonFields } from "./commonFields.model";
+
+export interface Job extends CommonFields {
   workHours: number,
   pricePerHour: number
 }
