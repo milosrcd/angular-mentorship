@@ -1,3 +1,4 @@
+import { ApiResponse } from './models/apiResponse.model';
 import { SumResult } from './models/sumResult.model';
 import { DateFormats } from './enums/dateFormats.enum';
 import { Job } from './models/job.model';
@@ -131,6 +132,16 @@ export class AppComponent implements OnInit {
 
   date = new Date("2023-02-21");
 
+  jobsApi: Job[] = [this.jobClassInstace1, this.jobClassInstace2]
+  bookApi: Book[] = [this.bookInterface1, this.bookInterface2];
+  postApi: Post[] = [this.postInterface1, this.postInterface2];
+
+  josbResponse = new ApiResponse(this.jobsApi, this.jobsApi.length, 2, this.jobsApi.length);
+  bookResponse = new ApiResponse(this.bookApi, this.bookApi.length, 2, this.bookApi.length);
+  postResponse = new ApiResponse(this.postApi, this.postApi.length, 2, this.postApi.length);
+
+
+
   ngOnInit(): void {
     console.log(this.candidate1);
     console.log(this.candidate2);
@@ -170,8 +181,12 @@ export class AppComponent implements OnInit {
     console.log(this.formatDate(this.date, DateFormats.MMDDYYYY));
 
     console.log(this.calculate(2, 3));
-    console.log(this.calculate(5,15));
+    console.log(this.calculate(5, 15));
     console.log(this.calculate(-4, 2));
+
+    console.log(this.josbResponse);
+    console.log(this.bookResponse);
+    console.log(this.postResponse);
 
   }
 
@@ -203,8 +218,8 @@ export class AppComponent implements OnInit {
     }
   }
 
-  calculate(a: number, b: number): SumResult{
+  calculate(a: number, b: number): SumResult {
     const sum = a + b;
-    return { a, b , sum};
+    return { a, b, sum };
   }
 }
