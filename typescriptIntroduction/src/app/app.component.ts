@@ -110,16 +110,8 @@ export class AppComponent implements OnInit {
   }
 
   arrayOfCandidates: Candidate[] = [
-    {
-      firstName: 'Milos',
-      lastName: 'Radosavljevic',
-      birthday: new Date(1987, 3, 4),
-    },
-    {
-      firstName: 'Tamara',
-      lastName: 'Manojlovic',
-      birthday: new Date(1987, 0, 4),
-    },
+    this.candidate1,
+    this.candidate2
   ];
 
   userSayHello = new User(10, 'Danijela', 'danijela@danijela.com', '+381/1212121');
