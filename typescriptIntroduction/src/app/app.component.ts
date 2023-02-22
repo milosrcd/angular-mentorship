@@ -1,3 +1,4 @@
+import { SumResult } from './models/sumResult.model';
 import { DateFormats } from './enums/dateFormats.enum';
 import { Job } from './models/job.model';
 import { Book } from './models/book.model';
@@ -167,6 +168,11 @@ export class AppComponent implements OnInit {
     console.log(this.formatDate(this.date, DateFormats.YYYYMMDD));
     console.log(this.formatDate(this.date, DateFormats.DDMMYYYY));
     console.log(this.formatDate(this.date, DateFormats.MMDDYYYY));
+
+    console.log(this.calculate(2, 3));
+    console.log(this.calculate(5,15));
+    console.log(this.calculate(-4, 2));
+
   }
 
   printCandidates(candidates: Candidate[]): string {
@@ -197,6 +203,8 @@ export class AppComponent implements OnInit {
     }
   }
 
-
-
+  calculate(a: number, b: number): SumResult{
+    const sum = a + b;
+    return { a, b , sum};
+  }
 }
