@@ -135,11 +135,12 @@ export class AppComponent implements OnInit {
 
 
   ngOnInit(): void {
+    const candidateString = this.printCandidates(this.arrayOfCandidates);
+
     console.log(this.candidate1);
     console.log(this.candidate2);
 
     console.log(this.arrayOfCandidates);
-    const candidateString = this.printCandidates(this.arrayOfCandidates);
     console.log(candidateString);
 
     console.log(this.employee1);
@@ -184,13 +185,8 @@ export class AppComponent implements OnInit {
 
   printCandidates(candidates: Candidate[]): string {
     return candidates
-      .map(
-        (candidate) =>
-          `${candidate.firstName}` +
-          ' ' +
-          `${candidate.lastName}` +
-          ' : ' +
-          `${candidate.birthday.toDateString()}`
+      .map((candidate) =>
+        `${candidate.firstName} ${candidate.lastName}: ${candidate.birthday.toDateString()}`
       )
       .join(' \n');
   }
