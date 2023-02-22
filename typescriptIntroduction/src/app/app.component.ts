@@ -39,6 +39,14 @@ export class AppComponent implements OnInit {
   product4 = new Product(4, 'Monitor', 200, 'Samsung SuncMaster');
   product5 = new Product(5, 'Mouse', 20, 'Logitech');
 
+  arrayOfProducts: Product[] = [
+    this.product1,
+    this.product2,
+    this.product3,
+    this.product4,
+    this.product5
+  ]
+
 
   productBaseEnt = new Product(6, 'modem', 50, 'cisco');
   userBaseEnt = new User(3, 'Jelena', 'jelena@jelena.com', '+381/444444');
@@ -148,6 +156,8 @@ export class AppComponent implements OnInit {
 
     console.log(this.customer.customerInfo());
     console.log(this.customer1.getName());
+
+    console.log(this.arrayOfProducts);
 
     console.log(this.baseEntity);
     console.log('Classes are the fundamental entities used to create reusable components. It is a group of objects which have common properties. It can contain properties like fields, methods, constructors, etc. An Interface defines a structure which acts as a contract in our application.')
