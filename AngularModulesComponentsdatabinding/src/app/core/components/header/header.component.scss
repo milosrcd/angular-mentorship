@@ -1,0 +1,35 @@
+@import '../../../styles/variables';
+
+
+// .header-1 {
+//   background: $black;
+//   min-height: 100vh;
+//   width: 100%;
+//   background-image: linear-gradient(90deg, rgba(242, 239, 220, 0) 50%, rgba(242, 239, 220, 0.3) 90%), url("../../../../assets/images/Signupbackground.jpg");
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: 10% 20%;
+// }
+
+.menu-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px;
+}
+
+.icon {
+  width: 25px;
+  height: 4px;
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(219, 215, 198);
+  margin: 4px 30px;
+}
+
+.main-heading-1 {
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: $fieldBackground;
+}

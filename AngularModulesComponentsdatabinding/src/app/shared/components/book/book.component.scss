@@ -1,0 +1,54 @@
+@import '../../../styles/variables';
+
+.book-content {
+  width: 370px;
+  height: 210px;
+  background-color: $fieldBackground;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.book-heading {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 3px 10px 5px 0;
+}
+
+.all-description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.img {
+  width: 100px;
+  height: 160px;
+  border-radius: 3px;
+}
+
+.author {
+  font-size: 15px;
+}
+
+.book-category {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.book-description {
+  width: 240px;
+  height: 75px;
+  font-size: 13px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.book-btn {
+  color: rgb(219, 215, 198);
+  background-color: rgb(131, 126, 114);
+  border: none;
+  border-radius: 3px;
+  padding: 5px 15px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
