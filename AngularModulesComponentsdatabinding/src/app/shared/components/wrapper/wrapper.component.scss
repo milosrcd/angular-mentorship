@@ -1,7 +1,9 @@
+@import '../../../styles/variables';
+
 .search-category-1 {
-  width: 50%;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   position: relative;
   margin: 10px auto;
 }
@@ -13,3 +15,5 @@
   border: transparent;
   width: 79vw;
 }
+
+

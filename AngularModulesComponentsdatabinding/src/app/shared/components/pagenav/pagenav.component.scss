@@ -4,3 +4,45 @@
   justify-content: flex-end;
   margin: 5px 0;
 }
+
+ul {
+  list-style-type: none;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+.fa-solid,
+.fas {
+  font-weight: 900;
+}
+
+.fa-solid {
+  font-family: "Font Awesome 6 Free";
+  -webkit-font-smoothing: antialiased;
+  display: var(--fa-display, inline-block);
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+}
+
+.list-1 li {
+  font-size: 12px;
+  text-decoration: none;
+  list-style: none;
+  color: rgb(219, 215, 198);
+  margin: 5px 15px 10px 15px;
+  cursor: default;
+}
+
+li {
+  text-align: -webkit-match-parent;
+}

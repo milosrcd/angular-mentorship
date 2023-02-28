@@ -1,15 +1,14 @@
-@import '../../../styles/variables';
+@import "../../../styles/variables";
+@import "https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@1,400;1,500;1,600;1,700;1,800;1,900&family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css";
 
-
-// .header-1 {
-//   background: $black;
-//   min-height: 100vh;
-//   width: 100%;
-//   background-image: linear-gradient(90deg, rgba(242, 239, 220, 0) 50%, rgba(242, 239, 220, 0.3) 90%), url("../../../../assets/images/Signupbackground.jpg");
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   background-position: 10% 20%;
-// }
+.header-1 {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
 
 .menu-logo {
   display: flex;
@@ -32,4 +31,12 @@
   font-weight: 700;
   letter-spacing: 0.2px;
   color: $fieldBackground;
+}
+
+.fa-user-alt {
+  color: rgba(144, 140, 127, 255);
+  font-size: 16px;
+  padding: 15px 7px;
+  border-radius: 3px;
+  background-color: $fieldBackground;
 }
