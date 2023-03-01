@@ -12,4 +12,8 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSearch(event: FocusEvent): void{
+    const value = (event.target as HTMLInputElement).value;
+    console.log(value);
+  }
 }
