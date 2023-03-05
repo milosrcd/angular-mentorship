@@ -1,6 +1,6 @@
 @import "styles/variables";
 
-.wrapper-1 {
+.wrapper {
   background: $black;
   background-image: url("../assets/images/Signupbackground.jpg");
   background-position: left 10% bottom 45%;
@@ -11,14 +11,14 @@
   position: relative;
 }
 
-.main-container-1 {
+.main-container {
   width: 100%;
   height: 85vh;
   display: flex;
   justify-content: space-between;
 }
 
-.main-content-1 {
+.main-content {
   margin: auto;
   padding: 0px 20px;
 }
@@ -27,7 +27,7 @@
   height: 85vh;
 }
 
-.homepage-heading-1 {
+.homepage-heading {
   color: $fieldBackground;
   font-size: 25px;
   font-weight: 700;

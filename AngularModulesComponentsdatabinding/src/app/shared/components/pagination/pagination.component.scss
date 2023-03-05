@@ -1,8 +1,18 @@
-.list-1 {
+.list {
   width: 95%;
   display: flex;
   justify-content: flex-end;
   margin: 5px 0;
+
+  li {
+    font-size: 12px;
+    text-decoration: none;
+    list-style: none;
+    color: rgb(219, 215, 198);
+    margin: 5px 15px 10px 15px;
+    cursor: default;
+    text-align: -webkit-match-parent;
+  }
 }
 
 ul {
@@ -34,15 +44,3 @@ li {
   text-rendering: auto;
 }
 
-.list-1 li {
-  font-size: 12px;
-  text-decoration: none;
-  list-style: none;
-  color: rgb(219, 215, 198);
-  margin: 5px 15px 10px 15px;
-  cursor: default;
-}
-
-li {
-  text-align: -webkit-match-parent;
-}
