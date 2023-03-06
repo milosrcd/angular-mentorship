@@ -1,4 +1,4 @@
-<div class="wrapper-2">
+<div>
   <form class="search-category" id="search-category-form">
     <!--Search component-->
     <app-search></app-search>
@@ -11,13 +11,13 @@
   <!--Books-->
   <div class="books" id="books">
     <!--single book-->
-    <app-book></app-book>
+    <app-book [book]="books[0]"></app-book>
     <!--single book end-->
-    <app-book></app-book>
-    <app-book></app-book>
-    <app-book></app-book>
-    <app-book></app-book>
-    <app-book></app-book>
+    <app-book [book]="books[1]"></app-book>
+    <app-book [book]="books[2]"></app-book>
+    <app-book [book]="books[3]"></app-book>
+    <app-book [book]="books[4]"></app-book>
+    <app-book [book]="books[5]"></app-book>
   </div>
   <!--Books end-->
   <!-- Page Numbers starts-->

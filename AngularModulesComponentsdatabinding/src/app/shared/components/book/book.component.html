@@ -1,23 +1,13 @@
 <article class="book-content">
-  <h3 class="book-heading">Angular Projects</h3>
+  <h3 class="book-heading">{{ book.title }}</h3>
   <div class="all-description">
-    <img
-      src="https://images-na.ssl-images-amazon.com/images/I/41ozUFXCXOS._SX404_BO1,204,203,200_.jpg"
-      alt="Angular Projects"
-      class="img"
-    />
+    <img src="{{ book.imgSrc }}" alt="{{ book.title }}" class="img" />
     <div class="description">
-      <h4 class="author">Aristeidis Bampakos, <span>1995</span></h4>
-      <p class="book-category">Category: Literary</p>
-      <p class="book-description">
-        'Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        Magnam iure facere molestiae ducimus commodi dignissimos
-        corrupti accusantium deserunt minima enim dicta assumenda
-        sapiente quam, dolorum eum ipsa voluptatem sed, consequatur
-        eligendi perspiciatis, non soluta? Eum sequi, ab cupiditate
-        omnis, animi doloremque amet modi natus rem, aperiam tempore
-        laborum ipsa voluptatum?'
-      </p>
+      <h4 class="author">
+        {{ book.author }}, <span>{{ book.year }}</span>
+      </h4>
+      <p class="book-category">{{ book.category }}</p>
+      <p class="book-description">{{ book.description }}</p>
       <a href="#1" class="book-btn">Book Overview</a>
     </div>
   </div>
