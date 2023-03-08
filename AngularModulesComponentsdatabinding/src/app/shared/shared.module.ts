@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PaginationComponent } from './components/pagination/pagination.component';
-import { BookComponent } from './components/book/book.component';
-import { WrapperComponent } from './components/wrapper/wrapper.component';
+import { BookComponent } from '../features/book/book.component';
+import { WrapperComponent } from '../features/wrapper/wrapper.component';
 import { SearchComponent } from './components/search/search.component';
 import { FilterComponent } from './components/filter/filter.component';
 
