@@ -4,8 +4,8 @@ import { PaginationComponent } from './components/pagination/pagination.componen
 import { SearchComponent } from './components/search/search.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
-
-
+import { MatSelectModule } from '@angular/material/select';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
   ],
   imports: [
     CommonModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatSelectModule,
+    ReactiveFormsModule
   ],
   exports: [PaginationComponent, SearchComponent, FilterComponent]
 })

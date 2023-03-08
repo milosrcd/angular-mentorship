@@ -1,4 +1,4 @@
-<div class="categoryListWrapper">
+<!-- <div class="categoryListWrapper">
 
   <select name="categores" class="filter">
     <option value="history">History</option>
@@ -6,4 +6,11 @@
     <option value="science">Science</option>
     <option value="romace">Romance</option>
   </select>
-</div>
+</div> -->
+
+<mat-form-field appearance="fill" floatLabel="always">
+  <mat-label>Filter by category:</mat-label>
+  <mat-select [formControl]="toppings" multiple>
+    <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+  </mat-select>
+</mat-form-field>

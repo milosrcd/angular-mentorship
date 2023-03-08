@@ -1,3 +1,5 @@
+import { Category } from './../../../models/category.enum';
+import { FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./filter.component.scss']
 })
 export class FilterComponent implements OnInit {
+
+  toppings = new FormControl('');
+  toppingList: string[] = [Category.Fantasy, Category.General, Category.History, Category.Romance, Category.Science];
 
   constructor() { }
 

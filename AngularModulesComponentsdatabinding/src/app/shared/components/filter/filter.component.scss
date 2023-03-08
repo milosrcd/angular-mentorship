@@ -2,64 +2,25 @@
 @import "https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@1,400;1,500;1,600;1,700;1,800;1,900&family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap";
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css";
 
-.categoryListWrapper {
+mat-form-field {
+  background-color: #f2efdc;
   position: relative;
-}
-
-.categoryListOptions {
-  position: absolute;
-  top: 10px;
-  left: 5px;
-  z-index: 2;
-  width: 100%;
-  background-color: $fieldBackground;
-  box-shadow: 3px 3px 3px $darkbrown;
-  border: 1px solid $darkbrown;
-  border-radius: 4px;
-}
-
-.display-none {
-  display: none;
-}
-
-.btn-arrow {
-  font-size: 22px;
-  position: absolute;
-  top: 5px;
-  right: 18px;
-  transform: translateY(4px);
-}
-
-.fa-solid,
-.fas {
-  font-weight: 900;
-}
-
-.fa-solid {
-  -webkit-font-smoothing: antialiased;
-  display: var(--fa-display, inline-block);
-  font-style: normal;
-  font-variant: normal;
-  line-height: 1;
-  text-rendering: auto;
-}
-
-input {
   padding: 12px 35px 12px 5px;
   margin-right: 5%;
   border-radius: 4px;
   border: none;
-  font-size: 15px;
-  background-color: $fieldBackground;
   width: 500px;
+  height: 46px;
 }
 
-.filter {
-  padding: 12px 35px 12px 5px;
-  margin-right: 5%;
-  border-radius: 4px;
-  border: none;
+mat-label {
   font-size: 15px;
-  background-color: rgb(242, 239, 220);
-  width: 500px;
+  height: 46px;
+  border-radius: 4px;
+  background-color: #f2efdc;
+  padding-left: 36%;
+}
+
+mat-option {
+  background-color: #f2efdc;
 }
