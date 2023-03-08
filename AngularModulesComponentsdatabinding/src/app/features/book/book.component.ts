@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { BookDetails } from 'src/app/models/bookdetails.model';
 
+
 @Component({
   selector: 'app-book',
   templateUrl: './book.component.html',

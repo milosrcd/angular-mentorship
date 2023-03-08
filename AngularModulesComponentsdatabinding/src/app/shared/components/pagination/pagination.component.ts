@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable, NgModule } from '@angular/core';
+import {MatPaginatorIntl, MatPaginatorModule} from '@angular/material/paginator';
+import {Subject} from 'rxjs';
+
+
 
 @Component({
   selector: 'app-pagination',
