@@ -1,7 +1,14 @@
 @import "../../styles/variables";
 
-.page-center{
+page-center{
   position: relative;
+}
+
+.homepage-heading {
+  color: $fieldBackground;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 40px;
 }
 
 .search-category {

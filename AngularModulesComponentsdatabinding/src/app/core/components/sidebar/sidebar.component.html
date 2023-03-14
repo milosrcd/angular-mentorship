@@ -1,0 +1,20 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav class="sidenav-content" #sidenav mode="side" [(opened)]="opened">
+    <ul class="sidenav-list">
+      <li>Homepage</li>
+      <li>Categories</li>
+      <li>Admin</li>
+    </ul>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <p>
+      <button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button>
+    </p>
+    <div class="main-container">
+        <div>
+          <app-wrapper></app-wrapper>
+        </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
