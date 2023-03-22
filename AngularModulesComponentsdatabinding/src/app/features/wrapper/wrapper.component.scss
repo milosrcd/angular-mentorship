@@ -1,20 +1,15 @@
 @import "../../styles/variables";
 
-page-center{
-  position: relative;
-}
-
 .homepage-heading {
   color: $fieldBackground;
   font-size: 25px;
   font-weight: 700;
-  margin-bottom: 40px;
 }
 
 .search-category {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   position: relative;
   margin: 10px auto;
 }
@@ -25,4 +20,11 @@ page-center{
   margin: auto;
   border: transparent;
   width: 79vw;
+  justify-content: center;
+}
+
+.main-content {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
 }

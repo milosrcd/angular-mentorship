@@ -2,13 +2,7 @@
 
 
 .mat-paginator {
-  width: 400px;
-  margin-right: 200px;
-  position: absolute;
-  bottom: 20;
-  right: 0;
-  margin-bottom: 10px; /* adjust as needed */
-  margin-right: 54px;
+  width: 200vw;
   color: rgb(219, 215, 198);
   background-color: transparent;
 }
@@ -17,4 +11,12 @@
 .mat-select-value,
 .mat-select-panel {
   color: blue;
+}
+
+:host ::ng-deep {
+  .mat-paginator{
+    .mat-select-value {
+      color: $fieldBackground;
+    }
+  }
 }

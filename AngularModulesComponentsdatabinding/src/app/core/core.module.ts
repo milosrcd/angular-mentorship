@@ -15,9 +15,6 @@ import { FeaturesModule } from "../features/features.module";
         SidebarComponent,
     ],
     exports: [HeaderComponent, FooterComponent, SidebarComponent],
-    imports: [
-        CommonModule, MatSidenavModule,
-        FeaturesModule
-    ]
+    imports: [CommonModule, MatSidenavModule, FeaturesModule]
 })
 export class CoreModule { }

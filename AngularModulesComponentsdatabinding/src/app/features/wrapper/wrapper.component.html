@@ -1,4 +1,4 @@
-<div class="page-center">
+<div class="main-content">
   <h1 class="homepage-heading">Homepage</h1>
   <form class="search-category" id="search-category-form">
     <!--Search component-->
@@ -10,7 +10,7 @@
     <!--filter component ends-->
   </form>
   <!--Books-->
-  <div class="books" id="books">
+  <div class="books">
     <!--single book-->
     <app-book [book]="books[0]"></app-book>
     <!--single book end-->
@@ -22,6 +22,6 @@
   </div>
   <!--Books end-->
   <!-- Page Numbers starts-->
-  <app-pagination></app-pagination>
+  <app-pagination class="pagination"></app-pagination>
   <!-- Page Numbers ends-->
 </div>
