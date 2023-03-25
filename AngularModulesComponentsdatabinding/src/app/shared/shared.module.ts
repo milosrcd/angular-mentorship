@@ -9,12 +9,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
+import { HeadlineComponent } from './components/headline/headline.component';
 
 @NgModule({
   declarations: [
     PaginationComponent,
     SearchComponent,
     FilterComponent,
+    HeadlineComponent,
   ],
   imports: [
     CommonModule,
@@ -25,6 +27,6 @@ import { MatIconModule } from '@angular/material/icon';
     FormsModule,
     MatIconModule
   ],
-  exports: [PaginationComponent, SearchComponent, FilterComponent]
+  exports: [PaginationComponent, SearchComponent, FilterComponent, HeadlineComponent]
 })
 export class SharedModule { }
