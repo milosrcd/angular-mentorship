@@ -7,7 +7,7 @@ import { WrapperComponent } from './features/wrapper/wrapper.component';
 const routes: Routes = [
   {
     path: '',
-    component: WrapperComponent
+    loadChildren: () => import('../app/features/features.module').then((module) => module.FeaturesModule),
   },
   {
     path: 'book/:bookId',

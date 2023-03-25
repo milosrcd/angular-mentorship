@@ -1,3 +1,5 @@
+import { FeaturesRoutingMOdule } from './features-routing.module';
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
@@ -20,7 +22,8 @@ import { SingleBookComponent } from './single-book/single-book.component';
     imports: [
         CommonModule,
         MatCardModule,
-        SharedModule
+        SharedModule,
+        FeaturesRoutingMOdule
     ]
 })
 export class FeaturesModule { }

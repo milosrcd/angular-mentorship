@@ -6,6 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  sidebarOpen: boolean = false
+  // sidebarOpen: boolean = false
+  isSidebarVisible: boolean = false;
 
+  isHamburgerClicked(event: boolean) {
+    this.isSidebarVisible = event;
+  }
 }
