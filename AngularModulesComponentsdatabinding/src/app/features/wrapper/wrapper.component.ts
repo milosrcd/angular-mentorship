@@ -11,6 +11,7 @@ export class WrapperComponent implements OnInit {
 
   books: BookDetails[] = [
     {
+      id: 1,
       imgSrc: '../../../../assets/images/moneypower.jpg',
       title: 'Money Power',
       author: 'Name Surename',
@@ -19,6 +20,7 @@ export class WrapperComponent implements OnInit {
       description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim'
     },
     {
+      id: 2,
       imgSrc: '../../../../assets/images/myfirstlove.jpg',
       title: 'My First Love',
       author: 'Name Surename',
@@ -27,6 +29,7 @@ export class WrapperComponent implements OnInit {
       description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim'
     },
     {
+      id: 3,
       imgSrc: '../../../../assets/images/mylittlelove.jpg',
       title: 'My Litle Life',
       author: 'Name Surename',
@@ -35,6 +38,7 @@ export class WrapperComponent implements OnInit {
       description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim'
     },
     {
+      id: 4,
       imgSrc: '../../../../assets/images/thelosttrip.jpg',
       title: 'The Lost Trip',
       author: 'Name Surename',
@@ -43,6 +47,7 @@ export class WrapperComponent implements OnInit {
       description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim'
     },
     {
+      id: 5,
       imgSrc: '../../../../assets/images/dark.jpg',
       title: 'Dark',
       author: 'Name Surename',
@@ -51,6 +56,7 @@ export class WrapperComponent implements OnInit {
       description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim'
     },
     {
+      id: 6,
       imgSrc: '../../../../assets/images/findme.jpg.png',
       title: 'Find Me',
       author: 'Name Surename',

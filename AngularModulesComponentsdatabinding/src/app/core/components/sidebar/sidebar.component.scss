@@ -1,19 +1,48 @@
 @import "../../../styles/variables";
 
-.sidenav-content {
-  background-color: rgba($black, 0.5);
-  height: 80%;
-  width: 80%;
-}
-
-.sidenav-list {
-  font-size: 20px;
-  color: $brown;
-}
-
-.example-container {
-  width: 100%;
-  height: calc(205vh - 115vh);
+.sidebar-container {
+  width: 300px;
   background-color: transparent;
+  border-right: 2px solid white;
+  min-height: 95vh;
+  .sidebar-nav {
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.3);
+    min-height: 95vh;
+    ul{
+      list-style: none;
+      li {
+        padding: 20px 0px;
+        :hover {
+          cursor: pointer;
+        }
+        a {
+          text-decoration: none;
+          color: white;
+        }
+        .sidebar-btn {
+          color:white;
+          text-transform: uppercase;
+          display: flex;
+
+          .sidebar-btn-text{
+            font-size: 20px;
+            margin-left: 15px;
+            text-transform: uppercase;
+          }
+          .select-sidebar {
+            padding: 25px;
+          }
+        }
+      }
+    }
+  }
 }
+
+.active{
+  background-color: gray !important;
+  border-right: 5px solid white !important;
+}
+
+
 
