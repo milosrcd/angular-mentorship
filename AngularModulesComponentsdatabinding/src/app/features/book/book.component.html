@@ -8,7 +8,7 @@
       </h4>
       <p class="book-category">{{ book.category }}</p>
       <p class="book-description">{{ book.description }}</p>
-      <a href="#1" class="book-btn">Book Overview</a>
+      <a class="book-btn" [routerLink]="['/book', book.id]">Book Overview</a>
     </div>
   </div>
 </article>

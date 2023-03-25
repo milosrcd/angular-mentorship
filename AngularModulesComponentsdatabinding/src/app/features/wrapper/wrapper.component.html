@@ -12,14 +12,9 @@
   </form>
   <!--Books-->
   <div class="books">
-    <!--single book-->
-    <app-book [book]="books[0]"></app-book>
-    <!--single book end-->
-    <app-book [book]="books[1]"></app-book>
-    <app-book [book]="books[2]"></app-book>
-    <app-book [book]="books[3]"></app-book>
-    <app-book [book]="books[4]"></app-book>
-    <app-book [book]="books[5]"></app-book>
+    <ng-container *ngFor="let book of books">
+      <app-book [book]="book"></app-book>
+    </ng-container>
   </div>
   <!--Books end-->
   <!-- Page Numbers starts-->
