@@ -1,6 +1,7 @@
 import { BookDetails } from 'src/app/models/bookdetails.model';
 import { Component, OnInit } from '@angular/core';
 import { Category } from 'src/app/models/category.enum';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-wrapper',
@@ -8,6 +9,8 @@ import { Category } from 'src/app/models/category.enum';
   styleUrls: ['./wrapper.component.scss']
 })
 export class WrapperComponent implements OnInit {
+
+  bookId: string | null = '';
 
   books: BookDetails[] = [
     {
@@ -68,9 +71,16 @@ export class WrapperComponent implements OnInit {
 
   ]
 
-  constructor() { }
+  constructor(private activatedRouter: ActivatedRoute) { }
+
+  book?: BookDetails;
 
   ngOnInit(): void {
+
+    // let bookId = this.activatedRouter.snapshot.paramMap.get('id');
+    // this.bookId = bookId;
+
+    // this.book = this.books.find(book => book.id.toString() === this.bookId);
   }
 
 }

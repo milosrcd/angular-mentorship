@@ -13,6 +13,7 @@ export class SingleBookComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

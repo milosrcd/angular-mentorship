@@ -1,0 +1,52 @@
+@import "../book/book.component";
+@import "../../../app/styles/variables";
+
+:host {
+  margin:15px 25px;
+  min-height: 87vh;
+  width: 1100px;
+}
+.single-book-title {
+  color: $beige;
+  margin-bottom: 30px;
+}
+.single-book {
+  width: 100%;
+  background-color: $beige;
+  padding: 20px;
+  margin-bottom: 25px;
+  .single-book-content {
+    display: flex;
+    flex-wrap: wrap;
+    .single-book-img {
+      width: 30%;
+      img {
+        width: 80%;
+      }
+    }
+    .single-book-text {
+      width: 70%;
+      font-size: 15px;
+      .bold-text {
+        font-weight: 700;
+      }
+      .normal-text {
+        font-weight: 300;
+      }
+      .single-book-paragraf {
+        font-style: italic;
+      }
+    }
+  }
+}
+.single-book-button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  .single-book-btn {
+  width: 15%;
+  padding: 10px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+}

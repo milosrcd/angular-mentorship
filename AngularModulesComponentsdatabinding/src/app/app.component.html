@@ -5,7 +5,7 @@
 
   <!--Main view-->
   <div class="page-center">
-    <app-sidebar class="sidebar"></app-sidebar>
+    <app-sidebar class="sidebar" *ngIf="isSidebarVisible"></app-sidebar>
     <!-- <app-wrapper></app-wrapper> -->
     <router-outlet></router-outlet>
   </div>
