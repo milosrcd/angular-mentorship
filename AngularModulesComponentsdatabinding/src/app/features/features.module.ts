@@ -7,13 +7,15 @@ import { BookComponent } from '../features/book/book.component';
 import { WrapperComponent } from '../features/wrapper/wrapper.component';
 import { SharedModule } from "../shared/shared.module";
 import { SingleBookComponent } from './single-book/single-book.component';
+import { BookBackgroundDirective } from './directives/book-background.directive';
 
 
 @NgModule({
     declarations: [
         BookComponent,
         WrapperComponent,
-        SingleBookComponent
+        SingleBookComponent,
+        BookBackgroundDirective
     ],
     exports: [
         BookComponent,

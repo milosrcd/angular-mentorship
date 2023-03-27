@@ -64,7 +64,7 @@ export class WrapperComponent implements OnInit {
       title: 'Find Me',
       author: 'Name Surename',
       year: 2021,
-      category: Category.History,
+      category: Category.Literary,
       description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim'
     },
 
