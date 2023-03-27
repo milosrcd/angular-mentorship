@@ -1,7 +1,7 @@
 import { WrapperComponent } from './wrapper/wrapper.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { SingleBookComponent } from './single-book/single-book.component';
+import { SingleBookComponent } from './singlebook/singlebook.component';
 
 const routes: Routes = [
   {
@@ -9,7 +9,7 @@ const routes: Routes = [
     component: WrapperComponent
   },
   {
-    path: 'book/:bookId',
+    path: 'book/:id',
     component: SingleBookComponent
   },
 ];

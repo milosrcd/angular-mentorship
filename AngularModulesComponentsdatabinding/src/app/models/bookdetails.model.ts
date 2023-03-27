@@ -3,6 +3,7 @@ import { Category } from "./category.enum";
 export interface BookDetails {
   id: number;
   title: string;
+  alt?: string;
   imgSrc: string;
   author: string;
   year: number;

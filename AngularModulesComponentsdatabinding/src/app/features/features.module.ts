@@ -6,7 +6,7 @@ import { MatCardModule } from '@angular/material/card';
 import { BookComponent } from '../features/book/book.component';
 import { WrapperComponent } from '../features/wrapper/wrapper.component';
 import { SharedModule } from "../shared/shared.module";
-import { SingleBookComponent } from './single-book/single-book.component';
+import { SingleBookComponent } from './singlebook/singlebook.component';
 import { BookBackgroundDirective } from './directives/book-background.directive';
 
 
@@ -15,7 +15,7 @@ import { BookBackgroundDirective } from './directives/book-background.directive'
         BookComponent,
         WrapperComponent,
         SingleBookComponent,
-        BookBackgroundDirective
+        BookBackgroundDirective,
     ],
     exports: [
         BookComponent,
