@@ -1,5 +1,5 @@
 import { ajax } from 'rxjs/ajax';
-import { interval, debounceTime, combineLatest, forkJoin, of, fromEvent } from 'rxjs';
+import { interval, debounceTime, combineLatest, forkJoin, of, BehaviorSubject, Observable, retry, catchError, Subscription } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -19,6 +19,9 @@ export class AppComponent implements OnInit {
   data1$ = ajax('https://www.boredapi.com/api/activity?participants=1');
   data2$ = ajax('https://www.boredapi.com/api/activity?type=recreational');
 
+  data$?: Observable<any>;
+
+
   constructor() {
   }
 
@@ -31,12 +34,12 @@ export class AppComponent implements OnInit {
       console.log(new Date()));
   }
 
-  searchEvent() {
-    const searchInput$ = fromEvent(document.getElementById('searchInput') as HTMLElement, 'input').pipe(debounceTime(500));
-    searchInput$.subscribe(data => console.log(data));
-  }
+  // searchEvent() {
+  //   const searchInput$ = fromEvent(document.getElementById('searchInput') as HTMLElement, 'input').pipe(debounceTime(500));
+  //   searchInput$.subscribe(data => console.log(data));
+  // }
 
-  forkJoinApis(){
+  forkJoinApis() {
     forkJoin({
       data1: this.data1$,
       data2: this.data2$
@@ -44,5 +47,23 @@ export class AppComponent implements OnInit {
       console.log(data1);
       console.log(data2);
     })
+  }
+
+  timerSubscription?: Subscription;
+  timerValue = 0;
+  timer$?: Observable<number>;
+
+  startTimer() {
+    this.timer$ = interval(1000);
+    this.timerSubscription = this.timer$.subscribe(() => {
+      this.timerValue++;
+    });
+  }
+
+  stopTimer() {
+    if (this.timerSubscription) {
+      this.timerSubscription.unsubscribe();
+      this.timerValue = 0;
+    }
   }
 }
