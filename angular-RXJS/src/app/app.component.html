@@ -1,6 +1,14 @@
 <p>1.</p>
 <button (click)="trackTimer()">Track Timer</button>
-<br>
+<br />
 <p>2.</p>
 <label for="searhInput">Search Input:</label>
 <input id="searchInput" (input)="searchEvent()" />
+<br />
+<p>3.</p>
+<input #box1 (keyup.enter)="onEnter(box1.value)">
+<br>
+<input #box2 (keyup.enter)="onEnter(box2.value)">
+<hr>
+<p>4.</p>
+<button id="forkJoinApis" (click)="forkJoinApis()">Fork Join</button>

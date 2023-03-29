@@ -1,4 +1,5 @@
-import { interval, fromEvent, debounceTime } from 'rxjs';
+import { ajax } from 'rxjs/ajax';
+import { interval, debounceTime, combineLatest, forkJoin, of, fromEvent } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,8 +10,16 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   currentTime$ = interval(1000);
+  values = '';
 
-  constructor(){
+  onEnter(value: string) {
+    console.log(this.values = value);
+  }
+
+  data1$ = ajax('https://www.boredapi.com/api/activity?participants=1');
+  data2$ = ajax('https://www.boredapi.com/api/activity?type=recreational');
+
+  constructor() {
   }
 
   ngOnInit(): void {
@@ -22,8 +31,18 @@ export class AppComponent implements OnInit {
       console.log(new Date()));
   }
 
-  searchEvent(){
+  searchEvent() {
     const searchInput$ = fromEvent(document.getElementById('searchInput') as HTMLElement, 'input').pipe(debounceTime(500));
     searchInput$.subscribe(data => console.log(data));
+  }
+
+  forkJoinApis(){
+    forkJoin({
+      data1: this.data1$,
+      data2: this.data2$
+    }).subscribe(({ data1, data2 }) => {
+      console.log(data1);
+      console.log(data2);
+    })
   }
 }
