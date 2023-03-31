@@ -1,5 +1,5 @@
 import { ajax } from 'rxjs/ajax';
-import { interval, debounceTime, combineLatest, forkJoin, of, BehaviorSubject, Observable, retry, catchError, Subscription } from 'rxjs';
+import { interval, debounceTime, combineLatest, forkJoin, of, BehaviorSubject, Observable, retry, catchError, Subscription, fromEvent, map } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,16 +10,17 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   currentTime$ = interval(1000);
+  searchInput$!: Observable<string>;
   values = '';
-
-  onEnter(value: string) {
-    console.log(this.values = value);
-  }
 
   data1$ = ajax('https://www.boredapi.com/api/activity?participants=1');
   data2$ = ajax('https://www.boredapi.com/api/activity?type=recreational');
 
   data$?: Observable<any>;
+
+  timerSubscription?: Subscription;
+  timerValue = 0;
+  timer$?: Observable<number>;
 
 
   constructor() {
@@ -27,6 +28,14 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.searchInput$ = fromEvent(document.getElementById('searchInput')!, 'keyup').pipe(
+      map((data: Event) => {
+        return ((data.target as HTMLInputElement).value)
+      }), debounceTime(500)
+    );
+    this.searchInput$.subscribe((data: string) => {
+      console.log('input value: ', data);
+    })
   }
 
   trackTimer() {
@@ -34,10 +43,9 @@ export class AppComponent implements OnInit {
       console.log(new Date()));
   }
 
-  // searchEvent() {
-  //   const searchInput$ = fromEvent(document.getElementById('searchInput') as HTMLElement, 'input').pipe(debounceTime(500));
-  //   searchInput$.subscribe(data => console.log(data));
-  // }
+  onEnter(value: string) {
+    console.log(this.values = value);
+  }
 
   forkJoinApis() {
     forkJoin({
@@ -48,10 +56,6 @@ export class AppComponent implements OnInit {
       console.log(data2);
     })
   }
-
-  timerSubscription?: Subscription;
-  timerValue = 0;
-  timer$?: Observable<number>;
 
   startTimer() {
     this.timer$ = interval(1000);
