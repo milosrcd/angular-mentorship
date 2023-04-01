@@ -1,22 +1,28 @@
 <p>Task 1.</p>
 <button (click)="trackTimer()">Track Timer</button>
 <hr />
-<br />
 <p>Task 2.</p>
 <label for="searhInput">Search Input:</label>
 <input type="text" id="searchInput"/>
 <hr />
 <p>Task 3.</p>
-<input #box1 (keyup.enter)="onEnter(box1.value)" />
+<input type="text" id="input1" placeholder="input 1" />
 <br />
 <br />
-<input #box2 (keyup.enter)="onEnter(box2.value)" />
+<input type="text" id="input2" placeholder="input 2" />
 <hr />
 <p>Task 4.</p>
 <button id="forkJoinApis" (click)="forkJoinApis()">Fork Join</button>
 <hr />
+<p>Task 5.</p>
+<input type="number" id="input3" placeholder="input 3" />
+<br />
+<br />
+<input type="number" id="input4" placeholder="input 4" />
+<hr />
 <p>Task 7.</p>
 <button (click)="startTimer()">Start Timer</button>
+<br />
 <br />
 <div>Timer Value: {{ timerValue }}</div>
 <br />
