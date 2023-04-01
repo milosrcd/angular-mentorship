@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
   data1$ = ajax('https://www.boredapi.com/api/activity?participants=1');
   data2$ = ajax('https://www.boredapi.com/api/activity?type=recreational');
 
-  data$?: Observable<any>;
+  data$!: Observable<any>;
 
   timerSubscription?: Subscription;
   timerValue = 0;
@@ -74,6 +74,7 @@ export class AppComponent implements OnInit {
     result2$.subscribe((result2$) => {
       console.log(`Sum of input3 and input4 is: ${result2$}`);
     })
+
   }
 
 
@@ -89,6 +90,22 @@ export class AppComponent implements OnInit {
     }).subscribe(({ data1, data2 }) => {
       console.log(data1);
       console.log(data2);
+    })
+  }
+
+  onEnter(value: string) {
+    this.data$ = ajax(value).pipe(
+      map((data) => {
+        console.log('map', data);
+        return data;
+      }),
+      retry(3),
+      catchError(() => {
+        return of({})
+      })
+    )
+    this.data$.subscribe(data => {
+      console.log(data);
     })
   }
 
