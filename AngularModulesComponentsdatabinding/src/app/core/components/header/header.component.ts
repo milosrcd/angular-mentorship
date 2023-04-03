@@ -17,6 +17,5 @@ export class HeaderComponent implements OnInit {
   hamburgerClicked(): void {
     this.visible = !this.visible;
     this.visibleValue.emit(this.visible);
-    console.log(this.visible);
   }
 }
