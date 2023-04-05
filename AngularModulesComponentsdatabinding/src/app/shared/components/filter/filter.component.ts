@@ -1,31 +1,44 @@
+import { Subject, takeUntil } from 'rxjs';
 import { Category } from '../../../models/category.enum';
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, OnDestroy } from '@angular/core';
+import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
   selector: 'app-filter',
   templateUrl: './filter.component.html',
   styleUrls: ['./filter.component.scss'],
 })
-export class FilterComponent implements OnInit {
+export class FilterComponent implements OnInit, OnDestroy {
+  unsubscribe$: Subject<void> = new Subject<void>;
+
+  categoriesList: Category[] = [];
+
+
+  constructor(private categoryService: CategoryService) { }
   @Output() displayValue = new EventEmitter<string>();
-  categoriesList: string[] = [
-    Category.General,
-    Category.Fantasy,
-    Category.History,
-    Category.Romance,
-    Category.Science
-  ];
-  constructor() {}
+
   displayOption: string = '';
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.categoryService.getAllCategories().pipe(
+      takeUntil(this.unsubscribe$)
+    )
+      .subscribe(
+        response => {
+          this.categoriesList = response;
+        }
+      )
+  }
 
   onClick() {
-    console.log(this.displayOption);
     this.displayValue.emit(this.displayOption);
   }
 
   getOptionValue(event: any): void {
     this.displayOption = event.target.value;
+  }
+
+  ngOnDestroy(): void {
+    throw new Error('Method not implemented.');
   }
 }

@@ -28,11 +28,10 @@ export class WrapperComponent implements OnInit, OnDestroy {
           this.books = response;
         }
       )
-
   }
   ngOnDestroy(): void {
     this.unsubscribe$.next();
-    this.unsubscribe$.complete;
+    this.unsubscribe$.complete();
   }
 
 }
