@@ -9,15 +9,15 @@ import { CategoryService } from 'src/app/services/category.service';
   styleUrls: ['./filter.component.scss'],
 })
 export class FilterComponent implements OnInit, OnDestroy {
+  @Output() displayValue = new EventEmitter<string>();
+  displayOption: string = '';
+
   unsubscribe$: Subject<void> = new Subject<void>;
 
   categoriesList: Category[] = [];
 
-
   constructor(private categoryService: CategoryService) { }
-  @Output() displayValue = new EventEmitter<string>();
 
-  displayOption: string = '';
 
   ngOnInit(): void {
     this.categoryService.getAllCategories().pipe(
