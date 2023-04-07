@@ -38,6 +38,7 @@ export class FilterComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    throw new Error('Method not implemented.');
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
   }
 }
