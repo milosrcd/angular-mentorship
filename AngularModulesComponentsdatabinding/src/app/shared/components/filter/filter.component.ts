@@ -22,12 +22,11 @@ export class FilterComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.categoryService.getAllCategories().pipe(
       takeUntil(this.unsubscribe$)
+    ).subscribe(
+      response => {
+        this.categoriesList = response;
+      }
     )
-      .subscribe(
-        response => {
-          this.categoriesList = response;
-        }
-      )
   }
 
   onClick() {
