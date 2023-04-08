@@ -76,7 +76,6 @@ export class SingleBookComponent implements OnInit {
 
   ngOnInit(): void {
     let bookId = this.activatedRouter.snapshot.paramMap.get('id');
-    console.log(bookId);
     this.bookId = bookId;
     this.singleBook = this.books.find((book) => book.id.toString() === this.bookId);
   }
