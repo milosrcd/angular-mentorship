@@ -17,8 +17,6 @@ export class WrapperComponent implements OnInit, OnDestroy {
 
   constructor(private activatedRouter: ActivatedRoute, private bookService: BookService) { }
 
-  // book?: BookDetails;
-
   ngOnInit(): void {
     this.bookService.getAll().pipe(
       takeUntil(this.unsubscribe$)
