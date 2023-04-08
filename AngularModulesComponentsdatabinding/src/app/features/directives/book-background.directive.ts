@@ -11,7 +11,6 @@ export class BookBackgroundDirective implements OnInit {
 
   }
   ngOnInit(): void {
-
     const categoryName = this.category?.replace('Category:', '');
     switch (categoryName) {
       case Category.Fantasy:
