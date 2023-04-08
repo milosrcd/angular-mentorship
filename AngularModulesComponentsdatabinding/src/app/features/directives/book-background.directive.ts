@@ -8,7 +8,6 @@ export class BookBackgroundDirective implements OnInit {
   @Input() category?: string;
 
   constructor(private elementRef: ElementRef) {
-
   }
   ngOnInit(): void {
     const categoryName = this.category?.replace('Category:', '');
