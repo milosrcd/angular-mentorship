@@ -7,13 +7,10 @@ import { BookDetails } from 'src/app/models/bookdetails.model';
   templateUrl: './book.component.html',
   styleUrls: ['./book.component.scss']
 })
-export class BookComponent implements OnInit {
+export class BookComponent{
   @Input()  book!: BookDetails;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
 
