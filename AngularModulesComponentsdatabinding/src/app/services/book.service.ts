@@ -67,7 +67,7 @@ export class BookService {
 
   constructor() { }
 
-  getAll(): Observable<BookDetails[]>{
+  getAll(): Observable<BookDetails[]> {
     return of(this.books);
   }
 }

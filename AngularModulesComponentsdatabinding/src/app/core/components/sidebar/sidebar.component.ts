@@ -10,6 +10,8 @@ import { Categories } from '../../interfaces/category.interface';
   styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent implements OnInit {
+  events: string[] = [];
+  opened?: boolean;
   adminValue: boolean = false;
   category: boolean = false;
   showFiller = false;

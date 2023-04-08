@@ -1,7 +1,7 @@
-import { WrapperComponent } from './wrapper/wrapper.component';
+import { WrapperComponent } from './components/wrapper/wrapper.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { SingleBookComponent } from './singlebook/singlebook.component';
+import { SingleBookComponent } from './components/singlebook/singlebook.component';
 
 const routes: Routes = [
   {

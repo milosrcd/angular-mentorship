@@ -1,12 +1,12 @@
-import { FeaturesRoutingMOdule } from './features-routing.module';
+import { FeaturesRoutingMOdule } from './books-routing.module';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
-import { BookComponent } from '../features/book/book.component';
-import { WrapperComponent } from '../features/wrapper/wrapper.component';
+import { BookComponent } from './components/book/book.component';
+import { WrapperComponent } from './components/wrapper/wrapper.component';
 import { SharedModule } from "../shared/shared.module";
-import { SingleBookComponent } from './singlebook/singlebook.component';
+import { SingleBookComponent } from './components/singlebook/singlebook.component';
 import { BookBackgroundDirective } from './directives/book-background.directive';
 
 
