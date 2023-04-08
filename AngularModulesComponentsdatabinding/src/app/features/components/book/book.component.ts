@@ -8,7 +8,6 @@ import { BookDetails } from 'src/app/models/bookdetails.model';
   styleUrls: ['./book.component.scss']
 })
 export class BookComponent implements OnInit {
-
   @Input()  book!: BookDetails;
 
   constructor() { }
