@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BookDetails } from '../models/bookdetails.model';
+import { Book-Details } from '../models/book-details.model';
 import { Category } from '../models/category.enum';
 import { Observable, of } from 'rxjs';
 
@@ -8,7 +8,7 @@ import { Observable, of } from 'rxjs';
 })
 export class BookService {
 
-  private books: BookDetails[] = [
+  private books: Book-Details[] = [
     {
       id: 1,
       imgSrc: '../../../../assets/images/moneypower.jpg',
@@ -67,7 +67,7 @@ export class BookService {
 
   constructor() { }
 
-  getAll(): Observable<BookDetails[]> {
+  getAll(): Observable<Book-Details[]> {
     return of(this.books);
   }
 }

@@ -1,4 +1,4 @@
-import { FeaturesRoutingMOdule } from './books-routing.module';
+import { BooksRoutingModule } from './books-routing.module';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -25,7 +25,7 @@ import { BookBackgroundDirective } from './directives/book-background.directive'
         CommonModule,
         MatCardModule,
         SharedModule,
-        FeaturesRoutingMOdule
+        BooksRoutingModule
     ]
 })
-export class FeaturesModule { }
+export class BooksModule { }

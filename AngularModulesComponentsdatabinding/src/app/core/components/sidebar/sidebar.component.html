@@ -30,8 +30,8 @@
                 [value]="category"
               >
                 <a
-                  [routerLink]="['/category/', { name: category.name }]"
-                  routerLinkActive="router-link-active"
+                  [routerLink]="['/category', category.name]"
+                  routerLinkActive="active"
                   >{{ category.name }}</a
                 >
               </li>
@@ -51,7 +51,11 @@
           <div class="sidebar-btn">
             <ul *ngIf="adminValue">
               <li class="categories-sidebar" *ngFor="let admin of adminList">
-                <a [routerLink]="['/admin/', admin.path]">{{ admin.linkName }} </a>
+                <a
+                  [routerLink]="['/admin', admin.path]"
+                  routerLinkActive="active"
+                  >{{ admin.linkName }}
+                </a>
               </li>
             </ul>
           </div>

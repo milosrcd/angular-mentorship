@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { FeaturesModule } from "../features/books.module";
+import { BooksModule } from "../features/books.module";
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
@@ -27,7 +27,7 @@ import { AppRoutingModule } from '../app-routing.module';
   imports: [
     CommonModule,
     MatSidenavModule,
-    FeaturesModule,
+    BooksModule,
     MatIconModule,
     MatListModule,
     MatExpansionModule,
