@@ -8,8 +8,8 @@ import { SidebarService } from './core/services/sidebar.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  unsubscribe$: Subject<void> = new Subject<void>;
   isSidebarVisible: boolean = false;
+  private unsubscribe$: Subject<void> = new Subject<void>;
 
   constructor(private sidebarService: SidebarService) { }
 

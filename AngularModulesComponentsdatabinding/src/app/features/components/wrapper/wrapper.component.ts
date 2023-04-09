@@ -11,9 +11,9 @@ import { BookService } from 'src/app/features/services/book.service';
   styleUrls: ['./wrapper.component.scss']
 })
 export class WrapperComponent implements OnInit, OnDestroy {
-  unsubscribe$: Subject<void> = new Subject<void>;
-
   books: BookDetails[] = [];
+
+  private unsubscribe$: Subject<void> = new Subject<void>;
 
   constructor(private activatedRouter: ActivatedRoute, private bookService: BookService) { }
 
