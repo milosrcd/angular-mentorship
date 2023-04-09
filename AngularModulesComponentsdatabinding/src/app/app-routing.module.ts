@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: 'admin',
-    loadChildren: () => import('../app/admin/admin.module').then((module) => module.AdminModule),
+    loadChildren: () => import('../app/features/admin/admin.module').then((module) => module.AdminModule),
   },
   {
     path: 'categories',
