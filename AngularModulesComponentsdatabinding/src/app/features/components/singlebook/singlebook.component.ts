@@ -11,8 +11,7 @@ import { Category } from 'src/app/features/models/category.enum';
 export class SingleBookComponent implements OnInit {
 
   bookId: string | null = '';
-
-  constructor(private activatedRouter: ActivatedRoute) { }
+  singleBook?: BookDetails;
 
   books: BookDetails[] = [
     {
@@ -72,9 +71,13 @@ export class SingleBookComponent implements OnInit {
 
   ];
 
-  singleBook?: BookDetails;
+  constructor(private activatedRouter: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.getBookId();
+  }
+
+  private getBookId() {
     let bookId = this.activatedRouter.snapshot.paramMap.get('id');
     this.bookId = bookId;
     this.singleBook = this.books.find((book) => book.id.toString() === this.bookId);
