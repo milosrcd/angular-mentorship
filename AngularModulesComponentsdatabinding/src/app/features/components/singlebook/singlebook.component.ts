@@ -1,7 +1,7 @@
 import { ActivatedRoute } from '@angular/router';
 import { Component, Input, OnInit } from '@angular/core';
-import { Book-Details } from 'src/app/models/book-details.model';
-import { Category } from 'src/app/models/category.enum';
+import { BookDetails } from 'src/app/features/models/book-details.model';
+import { Category } from 'src/app/features/models/category.enum';
 
 @Component({
   selector: 'app-singlebook',
@@ -14,7 +14,7 @@ export class SingleBookComponent implements OnInit {
 
   constructor(private activatedRouter: ActivatedRoute) { }
 
-  books: Book-Details[] = [
+  books: BookDetails[] = [
     {
       id: 1,
       imgSrc: '../../../../assets/images/moneypower.jpg',
@@ -72,7 +72,7 @@ export class SingleBookComponent implements OnInit {
 
   ];
 
-  singleBook?: Book-Details;
+  singleBook?: BookDetails;
 
   ngOnInit(): void {
     let bookId = this.activatedRouter.snapshot.paramMap.get('id');

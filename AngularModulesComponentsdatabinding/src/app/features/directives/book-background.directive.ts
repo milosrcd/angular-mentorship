@@ -1,4 +1,4 @@
-import { Category } from 'src/app/models/category.enum';
+import { Category } from 'src/app/features/models/category.enum';
 import { Directive, ElementRef, Input, OnInit } from '@angular/core';
 
 @Directive({

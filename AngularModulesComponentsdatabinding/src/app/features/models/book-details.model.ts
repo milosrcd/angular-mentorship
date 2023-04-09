@@ -1,6 +1,6 @@
 import { Category } from "./category.enum";
 
-export interface Book-Details {
+export interface BookDetails {
   id: number;
   title: string;
   alt?: string;

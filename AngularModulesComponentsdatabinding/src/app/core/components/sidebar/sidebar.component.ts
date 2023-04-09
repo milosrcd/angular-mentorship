@@ -1,7 +1,7 @@
 import { AdminLink } from './../../interfaces/admin-link.interface';
 import { Component, OnInit } from '@angular/core';
-import { Category } from 'src/app/models/category.enum';
-import { Admin } from 'src/app/models/admin.enum';
+import { Category } from 'src/app/features/models/category.enum';
+import { Admin } from 'src/app/features/models/admin.enum';
 import { Categories } from '../../interfaces/category.interface';
 
 @Component({

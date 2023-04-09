@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Book-Details } from '../models/book-details.model';
-import { Category } from '../models/category.enum';
+import { BookDetails } from '../features/models/book-details.model';
+import { Category } from '../features/models/category.enum';
 import { Observable, of } from 'rxjs';
 
 @Injectable({
@@ -8,10 +8,10 @@ import { Observable, of } from 'rxjs';
 })
 export class BookService {
 
-  private books: Book-Details[] = [
+  private books: BookDetails[] = [
     {
       id: 1,
-      imgSrc: '../../../../assets/images/moneypower.jpg',
+      imgSrc: '../../assets/images/moneypower.jpg',
       title: 'Money Power',
       author: 'Name Surename',
       year: 1998,
@@ -20,7 +20,7 @@ export class BookService {
     },
     {
       id: 2,
-      imgSrc: '../../../../assets/images/myfirstlove.jpg',
+      imgSrc: '../../assets/images/myfirstlove.jpg',
       title: 'My First Love',
       author: 'Name Surename',
       year: 2000,
@@ -29,7 +29,7 @@ export class BookService {
     },
     {
       id: 3,
-      imgSrc: '../../../../assets/images/mylittlelove.jpg',
+      imgSrc: '../../assets/images/mylittlelove.jpg',
       title: 'My Litle Life',
       author: 'Name Surename',
       year: 2005,
@@ -38,7 +38,7 @@ export class BookService {
     },
     {
       id: 4,
-      imgSrc: '../../../../assets/images/thelosttrip.jpg',
+      imgSrc: '../../assets/images/thelosttrip.jpg',
       title: 'The Lost Trip',
       author: 'Name Surename',
       year: 2008,
@@ -47,7 +47,7 @@ export class BookService {
     },
     {
       id: 5,
-      imgSrc: '../../../../assets/images/dark.jpg',
+      imgSrc: '../../assets/images/dark.jpg',
       title: 'Dark',
       author: 'Name Surename',
       year: 2018,
@@ -56,7 +56,7 @@ export class BookService {
     },
     {
       id: 6,
-      imgSrc: '../../../../assets/images/findme.jpg.png',
+      imgSrc: '../../assets/images/findme.jpg.png',
       title: 'Find Me',
       author: 'Name Surename',
       year: 2021,
@@ -67,7 +67,7 @@ export class BookService {
 
   constructor() { }
 
-  getAll(): Observable<Book-Details[]> {
+  getAll(): Observable<BookDetails[]> {
     return of(this.books);
   }
 }

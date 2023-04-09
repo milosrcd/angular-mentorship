@@ -1,5 +1,5 @@
 import { EventEmitter, Injectable, Output } from '@angular/core';
-import { Category } from '../models/category.enum';
+import { Category } from '../features/models/category.enum';
 import { Observable, of } from 'rxjs';
 
 @Injectable({

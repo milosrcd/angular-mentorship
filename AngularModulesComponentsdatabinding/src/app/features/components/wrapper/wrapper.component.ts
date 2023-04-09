@@ -1,7 +1,7 @@
 import { Subject, takeUntil } from 'rxjs';
-import { Book-Details } from 'src/app/models/book-details.model';
+import { BookDetails } from 'src/app/features/models/book-details.model';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Category } from 'src/app/models/category.enum';
+import { Category } from 'src/app/features/models/category.enum';
 import { ActivatedRoute } from '@angular/router';
 import { BookService } from 'src/app/services/book.service';
 
@@ -13,7 +13,7 @@ import { BookService } from 'src/app/services/book.service';
 export class WrapperComponent implements OnInit, OnDestroy {
   unsubscribe$: Subject<void> = new Subject<void>;
 
-  books: Book-Details[] = [];
+  books: BookDetails[] = [];
 
   constructor(private activatedRouter: ActivatedRoute, private bookService: BookService) { }
 

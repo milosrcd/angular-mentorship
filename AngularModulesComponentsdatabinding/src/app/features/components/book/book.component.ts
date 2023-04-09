@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Book-Details } from 'src/app/models/book-details.model';
+import { BookDetails } from 'src/app/features/models/book-details.model';
 
 
 @Component({
@@ -8,7 +8,7 @@ import { Book-Details } from 'src/app/models/book-details.model';
   styleUrls: ['./book.component.scss']
 })
 export class BookComponent{
-  @Input()  book!: Book-Details;
+  @Input()  book!: BookDetails;
 
   constructor() { }
 
