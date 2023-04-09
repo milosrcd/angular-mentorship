@@ -1,7 +1,7 @@
 import { Subject, takeUntil } from 'rxjs';
 import { Category } from '../../../features/models/category.enum';
 import { Component, OnInit, Output, EventEmitter, OnDestroy } from '@angular/core';
-import { CategoryService } from 'src/app/services/category.service';
+import { CategoryService } from 'src/app/features/services/category.service';
 
 @Component({
   selector: 'app-filter',

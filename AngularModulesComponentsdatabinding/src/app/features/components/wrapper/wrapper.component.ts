@@ -3,7 +3,7 @@ import { BookDetails } from '../../models/book-details.model';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Category } from '../../models/category.enum';
 import { ActivatedRoute } from '@angular/router';
-import { BookService } from 'src/app/services/book.service';
+import { BookService } from 'src/app/features/services/book.service';
 
 @Component({
   selector: 'app-wrapper',
