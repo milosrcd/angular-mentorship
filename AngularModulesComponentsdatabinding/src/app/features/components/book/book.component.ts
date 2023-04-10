@@ -27,6 +27,21 @@ export class BookComponent {
       })
   }
 
+  softDeleteBook(book: BookDetails){
+    this.bookService.softDelete(book)
+    .pipe(
+      takeUntil(this.unsubscribe$),
+      switchMap((deleteResult) => {
+        return this.bookService.getAllBooks();
+      })
+    )
+    .subscribe(
+      () => {
+        this.bookService.getAllBooks();
+      }
+    )
+  }
+
   ngOnDestroy(): void {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();

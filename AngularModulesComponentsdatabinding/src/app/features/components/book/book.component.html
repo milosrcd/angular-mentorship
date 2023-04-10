@@ -11,6 +11,8 @@
       <a class="book-btn" [routerLink]="['/book', book.id]">Book Overview</a>
       <br>
       <a class="book-btn" (click)="deleteBook(book)">Delete</a>
+      <br>
+      <a class="book-btn" (click)="softDeleteBook(book)">Soft Delete</a>
     </div>
   </div>
 </article>
