@@ -1,19 +1,16 @@
 import { Injectable } from '@angular/core';
 import { BookDetails } from '../models/book-details.model';
-import { Category } from '../models/category.enum';
 import { Observable, of } from 'rxjs';
-import { books } from 'src/app/mocks/mock-books';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BookService {
 
-  private booksList: BookDetails[] = books;
+  constructor(private httpClient: HttpClient) { }
 
-  constructor() { }
-
-  getAll(): Observable<BookDetails[]> {
-    return of(this.booksList);
+  getAllBooks(): Observable<BookDetails[]> {
+    return this.httpClient.get<BookDetails[]>("http://localhost:5000/books");
   }
 }

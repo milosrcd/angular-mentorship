@@ -9,4 +9,5 @@ export interface BookDetails {
   year: number;
   category: Category;
   description: string;
+  deletedAt: Date | null;
 }

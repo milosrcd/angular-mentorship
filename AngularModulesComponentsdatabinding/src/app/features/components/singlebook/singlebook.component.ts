@@ -21,7 +21,8 @@ export class SingleBookComponent implements OnInit {
       author: 'Name Surename',
       year: 1998,
       category: Category.General,
-      description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim'
+      description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim',
+      deletedAt: null
     },
     {
       id: 2,
@@ -30,7 +31,8 @@ export class SingleBookComponent implements OnInit {
       author: 'Name Surename',
       year: 2000,
       category: Category.General,
-      description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim'
+      description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim',
+      deletedAt: null
     },
     {
       id: 3,
@@ -39,7 +41,8 @@ export class SingleBookComponent implements OnInit {
       author: 'Name Surename',
       year: 2005,
       category: Category.General,
-      description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim'
+      description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim',
+      deletedAt: null
     },
     {
       id: 4,
@@ -48,7 +51,8 @@ export class SingleBookComponent implements OnInit {
       author: 'Name Surename',
       year: 2008,
       category: Category.History,
-      description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim'
+      description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim',
+      deletedAt: null
     },
     {
       id: 5,
@@ -57,7 +61,8 @@ export class SingleBookComponent implements OnInit {
       author: 'Name Surename',
       year: 2018,
       category: Category.Fantasy,
-      description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim'
+      description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim',
+      deletedAt: null
     },
     {
       id: 6,
@@ -66,7 +71,8 @@ export class SingleBookComponent implements OnInit {
       author: 'Name Surename',
       year: 2021,
       category: Category.Literary,
-      description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim'
+      description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim',
+      deletedAt: null
     },
 
   ];

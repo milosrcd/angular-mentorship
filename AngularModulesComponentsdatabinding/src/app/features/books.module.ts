@@ -8,6 +8,7 @@ import { WrapperComponent } from './components/wrapper/wrapper.component';
 import { SharedModule } from "../shared/shared.module";
 import { SingleBookComponent } from './components/singlebook/singlebook.component';
 import { BookBackgroundDirective } from './directives/book-background.directive';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { BookBackgroundDirective } from './directives/book-background.directive'
         CommonModule,
         MatCardModule,
         SharedModule,
-        BooksRoutingModule
+        BooksRoutingModule,
+        HttpClientModule
     ]
 })
 export class BooksModule { }
