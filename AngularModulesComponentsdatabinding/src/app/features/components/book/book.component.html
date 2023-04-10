@@ -9,6 +9,8 @@
       <p class="book-category">{{ book.category }}</p>
       <p class="book-description">{{ book.description }}</p>
       <a class="book-btn" [routerLink]="['/book', book.id]">Book Overview</a>
+      <br>
+      <a class="book-btn" (click)="deleteBook(book)">Delete</a>
     </div>
   </div>
 </article>

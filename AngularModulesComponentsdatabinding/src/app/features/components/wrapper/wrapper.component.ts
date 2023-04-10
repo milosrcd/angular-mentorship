@@ -1,5 +1,5 @@
 import { books } from 'src/app/mocks/mock-books';
-import { Subject, map, takeUntil } from 'rxjs';
+import { Subject, map, takeUntil, switchMap } from 'rxjs';
 import { BookDetails } from '../../models/book-details.model';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Category } from '../../models/category.enum';
@@ -23,10 +23,11 @@ export class WrapperComponent implements OnInit, OnDestroy {
   }
 
   private getBooks() {
-    this.bookService.getAllBooks().pipe(
-      takeUntil(this.unsubscribe$),
-      map((books: BookDetails[]) => books.filter(book => book.deletedAt === null))
-    )
+    this.bookService.getAllBooks()
+      .pipe(
+        takeUntil(this.unsubscribe$),
+        map((books: BookDetails[]) => books.filter(book => book.deletedAt === null))
+      )
       .subscribe(
         response => {
           this.books = response;
