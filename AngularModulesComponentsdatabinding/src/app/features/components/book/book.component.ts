@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { BookDetails } from '../../models/book-details.model';
 import { BookService } from '../../services/book.service';
 import { Subject, switchMap, takeUntil } from 'rxjs';
@@ -10,41 +10,17 @@ import { Subject, switchMap, takeUntil } from 'rxjs';
 })
 export class BookComponent {
   @Input() book!: BookDetails;
-  private unsubscribe$: Subject<void> = new Subject<void>;
+  @Output() delete = new EventEmitter();
+  @Output() softDelete = new EventEmitter();
 
-  constructor(private bookService: BookService) { }
+  constructor() { }
 
-  deleteBook(book: BookDetails) {
-    this.bookService.delete(book)
-      .pipe(
-        takeUntil(this.unsubscribe$),
-        switchMap((deleteResult) => {
-          return this.bookService.getAllBooks();
-        })
-      )
-      .subscribe(data => {
-        console.log(data)
-      })
+  onDelete(){
+    this.delete.emit();
   }
 
-  softDeleteBook(book: BookDetails){
-    this.bookService.softDelete(book)
-    .pipe(
-      takeUntil(this.unsubscribe$),
-      switchMap((deleteResult) => {
-        return this.bookService.getAllBooks();
-      })
-    )
-    .subscribe(
-      () => {
-        this.bookService.getAllBooks();
-      }
-    )
-  }
-
-  ngOnDestroy(): void {
-    this.unsubscribe$.next();
-    this.unsubscribe$.complete();
+  onSoftDelete(){
+    this.softDelete.emit();
   }
 
 }

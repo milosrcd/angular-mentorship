@@ -10,9 +10,9 @@
       <p class="book-description">{{ book.description }}</p>
       <a class="book-btn" [routerLink]="['/book', book.id]">Book Overview</a>
       <br>
-      <a class="book-btn" (click)="deleteBook(book)">Delete</a>
+      <a class="book-btn" (click)="onDelete()">Delete</a>
       <br>
-      <a class="book-btn" (click)="softDeleteBook(book)">Soft Delete</a>
+      <a class="book-btn" (click)="onSoftDelete()">Soft Delete</a>
     </div>
   </div>
 </article>
