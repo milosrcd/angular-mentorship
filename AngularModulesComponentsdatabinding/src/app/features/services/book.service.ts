@@ -1,6 +1,6 @@
+import { BookDetails } from 'src/app/features/models/book-details.model';
 import { Injectable } from '@angular/core';
-import { BookDetails } from '../models/book-details.model';
-import { Observable, catchError, of } from 'rxjs';
+import { Observable, catchError, map, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '@env';
 
@@ -13,6 +13,10 @@ export class BookService {
 
   getAllBooks(): Observable<BookDetails[]> {
     return this.httpClient.get<BookDetails[]>(`${environment.baseApiUrl}books`);
+  }
+
+  getBookById(id: number): Observable<BookDetails> {
+    return this.httpClient.get<BookDetails>(`${environment.baseApiUrl}books/${id}`);
   }
 
   delete(book: BookDetails): Observable<any> {

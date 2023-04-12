@@ -30,8 +30,8 @@ export class WrapperComponent implements OnInit, OnDestroy {
           return this.bookService.getAllBooks();
         })
       )
-      .subscribe(data => {
-        console.log(data)
+      .subscribe(() => {
+        this.bookService.getAllBooks();
       })
   }
 
