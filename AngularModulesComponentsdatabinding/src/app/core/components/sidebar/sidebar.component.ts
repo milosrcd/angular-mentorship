@@ -1,5 +1,5 @@
 import { AdminLink } from './../../interfaces/admin-link.interface';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Category } from 'src/app/features/models/category.enum';
 import { Admin } from 'src/app/features/models/admin.enum';
 import { Categories } from '../../interfaces/category.interface';
@@ -11,7 +11,7 @@ import { Subject, map, takeUntil } from 'rxjs';
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss'],
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent implements OnInit, OnDestroy {
   events: string[] = [];
   opened?: boolean;
   adminValue: boolean = false;
@@ -37,16 +37,21 @@ export class SidebarComponent implements OnInit {
     this.getCategories();
   }
 
+  onToggle() {
+    this.category = !this.category;
+  }
+  onClick() {
+    this.adminValue = !this.adminValue;
+  }
+
   private getCategories() {
     this.categoryService.getAllCategories()
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe(categories => this.categoriesList = categories);
   }
 
-  onToggle() {
-    this.category = !this.category;
-  }
-  onClick() {
-    this.adminValue = !this.adminValue;
+  ngOnDestroy(): void {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
   }
 }
