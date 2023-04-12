@@ -60,5 +60,32 @@
       "description":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim",
       "deletedAt": null
    }
+  ],
+  "categories":[
+
+    {
+      "id": 1,
+      "name": "General"
+    },
+    {
+      "id": 2,
+      "name": "Fantasy"
+    },
+    {
+      "id": 3,
+      "name": "History"
+    },
+    {
+      "id": 4,
+      "name": "Literary"
+    },
+    {
+      "id": 5,
+      "name": "Romance"
+    },
+    {
+      "id": 6,
+      "name": "Science"
+    }
   ]
 }

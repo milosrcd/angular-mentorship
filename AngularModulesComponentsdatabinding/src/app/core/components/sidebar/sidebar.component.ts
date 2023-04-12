@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Category } from 'src/app/features/models/category.enum';
 import { Admin } from 'src/app/features/models/admin.enum';
 import { Categories } from '../../interfaces/category.interface';
+import { CategoryService } from '../../services/category.service';
+import { Subject, map, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-sidebar',
@@ -15,32 +17,10 @@ export class SidebarComponent implements OnInit {
   adminValue: boolean = false;
   category: boolean = false;
   showFiller = false;
-  categoriesList: Categories[] = [
-    {
-      id: 1,
-      name: Category.General
-    },
-    {
-      id: 2,
-      name: Category.Fantasy
-    },
-    {
-      id: 3,
-      name: Category.History
-    },
-    {
-      id: 4,
-      name: Category.Literary
-    },
-    {
-      id: 5,
-      name: Category.Romance
-    },
-    {
-      id: 6,
-      name: Category.Science
-    }
-  ];
+  categoriesList: Categories[] = [];
+
+  private unsubscribe$: Subject<void> = new Subject<void>;
+
   adminList: AdminLink[] = [
     {
       linkName: Admin.books,
@@ -51,9 +31,17 @@ export class SidebarComponent implements OnInit {
       path: 'categories'
     }
   ];
-  constructor() { }
+  constructor(private categoryService: CategoryService) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.getCategories();
+  }
+
+  private getCategories() {
+    this.categoryService.getAllCategories()
+      .pipe(takeUntil(this.unsubscribe$))
+      .subscribe(categories => this.categoriesList = categories);
+  }
 
   onToggle() {
     this.category = !this.category;
