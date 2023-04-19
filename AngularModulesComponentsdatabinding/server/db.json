@@ -6,7 +6,7 @@
       "title": "Money Power",
       "author": "Name Surename",
       "year": 1998,
-      "category": "Category.General",
+      "category": "General",
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim",
       "deletedAt": null
     },
@@ -16,7 +16,7 @@
       "title": "My First Love",
       "author": "Name Surename",
       "year": 2000,
-      "category": "Category.General",
+      "category": "General",
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim",
       "deletedAt": null
     },
@@ -26,7 +26,7 @@
       "title": "My Litle Life",
       "author": "Name Surename",
       "year": 2005,
-      "category": "Category.General",
+      "category": "General",
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim",
       "deletedAt": null
     },
@@ -36,7 +36,7 @@
       "title": "The Lost Trip",
       "author": "Name Surename",
       "year": 2008,
-      "category": "Category.History",
+      "category": "History",
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim",
       "deletedAt": null
     },
@@ -46,7 +46,7 @@
       "title": "Dark",
       "author": "Name Surename",
       "year": 2018,
-      "category": "Category.Fantasy",
+      "category": "Fantasy",
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim",
       "deletedAt": null
     },
@@ -56,7 +56,7 @@
       "title": "Find Me",
       "author": "Name Surename",
       "year": 2021,
-      "category": "Category.Literary",
+      "category": "Literary",
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim",
       "deletedAt": null
     }

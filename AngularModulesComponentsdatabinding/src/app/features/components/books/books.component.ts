@@ -1,8 +1,6 @@
-import { books } from 'src/app/mocks/mock-books';
-import { Subject, map, takeUntil, switchMap, take } from 'rxjs';
+import { Subject, map, take } from 'rxjs';
 import { BookDetails } from '../../models/book-details.model';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Category } from '../../models/category.enum';
 import { ActivatedRoute } from '@angular/router';
 import { BookService } from 'src/app/features/services/book.service';
 
