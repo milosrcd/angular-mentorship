@@ -2,7 +2,11 @@
   <div class="single-book-container">
     <div class="single-book-box">
       <h1 class="single-book-title">Book Overview-{{ singleBook.title }}</h1>
-      <div class="single-book" appBookBackground [category]="singleBook.category">
+      <div
+        class="single-book"
+        appBookBackground
+        [category]="singleBook.category"
+      >
         <h2>{{ singleBook.title }}</h2>
         <div class="single-book-content">
           <div class="single-book-img">

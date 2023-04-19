@@ -27,7 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
         MatCardModule,
         SharedModule,
         BooksRoutingModule,
-        HttpClientModule
+        HttpClientModule,
     ]
 })
 export class BooksModule { }

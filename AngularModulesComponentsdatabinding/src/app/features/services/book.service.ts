@@ -19,17 +19,15 @@ export class BookService {
     return this.httpClient.get<BookDetails>(`${environment.baseApiUrl}books/${id}`);
   }
 
-  delete(book: BookDetails): Observable<any> {
-    return this.httpClient.delete(`${environment.baseApiUrl}books/${book.id}`);
+  delete(book: BookDetails): Observable<BookDetails> {
+    return this.httpClient.delete<BookDetails>
+      (`${environment.baseApiUrl}books/${book.id}`);
   }
 
-  softDelete(book: BookDetails): Observable<any> {
-    const deletedAt = new Date();
-    return this.httpClient.patch(`${environment.baseApiUrl}books/${book.id}`, { deletedAt }).pipe(
-      catchError(error => {
-        console.error(error);
-        return of(null);
-      })
+  softDelete(book: BookDetails): Observable<BookDetails> {
+    const deleted = new Date();
+
+    return this.httpClient.patch<BookDetails>(`${environment.baseApiUrl}books/${book.id}`, { deletedAt: deleted }
     );
   }
 }
