@@ -22,32 +22,20 @@ export class WrapperComponent implements OnInit, OnDestroy {
     this.getBooks();
   }
 
-  deleteBook(book: BookDetails) {
+  deleteBook(book: BookDetails): void {
     this.bookService.delete(book)
-      .pipe(
-        takeUntil(this.unsubscribe$),
-        switchMap((deleteResult) => {
-          return this.bookService.getAllBooks();
-        })
-      )
+      .pipe(take(1))
       .subscribe(() => {
-        this.bookService.getAllBooks();
+        this.getBooks();
       })
   }
 
   softDeleteBook(book: BookDetails) {
     this.bookService.softDelete(book)
-      .pipe(
-        takeUntil(this.unsubscribe$),
-        switchMap((deleteResult) => {
-          return this.bookService.getAllBooks();
-        })
-      )
-      .subscribe(
-        () => {
-          this.bookService.getAllBooks();
-        }
-      )
+      .pipe(take(1))
+      .subscribe(() => {
+        this.getBooks();
+      })
   }
 
   private getBooks() {
