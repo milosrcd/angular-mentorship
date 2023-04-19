@@ -1,12 +1,12 @@
-import { WrapperComponent } from './components/wrapper/wrapper.component';
+import { BooksComponent } from './books.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { SingleBookComponent } from './components/singlebook/singlebook.component';
+import { SingleBookComponent } from '../singlebook/singlebook.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: WrapperComponent
+    component: BooksComponent
   },
   {
     path: 'book/:id',

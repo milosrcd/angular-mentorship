@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./features/books.module').then((module) => module.BooksModule),
+    loadChildren: () => import('./features/components/books/books.module').then((module) => module.BooksModule),
   },
   {
     path: 'admin',

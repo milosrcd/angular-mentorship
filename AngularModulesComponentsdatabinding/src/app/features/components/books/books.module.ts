@@ -3,24 +3,24 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
-import { BookComponent } from './components/book/book.component';
-import { WrapperComponent } from './components/wrapper/wrapper.component';
-import { SharedModule } from "../shared/shared.module";
-import { SingleBookComponent } from './components/singlebook/singlebook.component';
-import { BookBackgroundDirective } from './directives/book-background.directive';
 import { HttpClientModule } from '@angular/common/http';
+import { BookComponent } from '../book/book.component';
+import { SingleBookComponent } from '../singlebook/singlebook.component';
+import { BookBackgroundDirective } from '../../directives/book-background.directive';
+import { BooksComponent } from './books.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
     declarations: [
-        BookComponent,
-        WrapperComponent,
-        SingleBookComponent,
-        BookBackgroundDirective,
+      BookComponent,
+      BooksComponent,
+      SingleBookComponent,
+      BookBackgroundDirective
     ],
     exports: [
         BookComponent,
-        WrapperComponent
+        BooksComponent
     ],
     imports: [
         CommonModule,

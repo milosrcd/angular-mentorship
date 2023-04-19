@@ -7,11 +7,11 @@ import { ActivatedRoute } from '@angular/router';
 import { BookService } from 'src/app/features/services/book.service';
 
 @Component({
-  selector: 'app-wrapper',
-  templateUrl: './wrapper.component.html',
-  styleUrls: ['./wrapper.component.scss']
+  selector: 'app-books',
+  templateUrl: './books.component.html',
+  styleUrls: ['./books.component.scss']
 })
-export class WrapperComponent implements OnInit, OnDestroy {
+export class BooksComponent implements OnInit, OnDestroy {
   books: BookDetails[] = [];
 
   private unsubscribe$: Subject<void> = new Subject<void>;
