@@ -13,6 +13,9 @@
             <ng-container *ngSwitchCase="'imgSrc'">
               <img [src]="book[column.property]" [alt]="book.title" />
             </ng-container>
+            <ng-container *ngSwitchCase="'description'">
+              <button (click)="readMore(book)">Read more</button>
+            </ng-container>
             <ng-container *ngSwitchDefault>
               {{ book[column.property] }}
             </ng-container>

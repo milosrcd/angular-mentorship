@@ -6,10 +6,12 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { AdminBookComponent } from './components/admin-book/admin-book.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ReadMoreComponent } from './components/read-more/read-more.component';
 
 @NgModule({
   declarations: [
     AdminBookComponent,
+    ReadMoreComponent,
   ],
   imports: [
     CommonModule,

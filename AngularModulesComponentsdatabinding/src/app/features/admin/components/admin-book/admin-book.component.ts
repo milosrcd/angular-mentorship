@@ -5,6 +5,8 @@ import { BookDetails } from 'src/app/features/models/book-details.model';
 import { Category } from 'src/app/features/models/category.enum';
 import { BookService } from 'src/app/features/services/book.service';
 import { Subject, catchError, map, take, takeUntil, throwError } from 'rxjs';
+import { MatDialog } from '@angular/material/dialog';
+import { ReadMoreComponent } from '../read-more/read-more.component';
 
 
 
@@ -68,7 +70,7 @@ export class AdminBookComponent implements OnInit, OnDestroy {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  constructor(private bookService: BookService) { }
+  constructor(private bookService: BookService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.getBooks();
@@ -77,6 +79,18 @@ export class AdminBookComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();
+  }
+
+  readMore(book: BookDetails): void {
+    this.dialog.open(ReadMoreComponent,{
+      minHeight: '400px',
+      width: '30%',
+      data: book,
+    })
+    .afterClosed()
+    .subscribe((data: any) => {
+      console.log(data);
+    })
   }
 
   private getBooks() {
