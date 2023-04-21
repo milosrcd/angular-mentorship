@@ -5,9 +5,11 @@
       "imgSrc": "../../assets/images/moneypower.jpg",
       "title": "Money Power",
       "author": "Name Surename",
+      "isbn": 1234,
       "year": 1998,
       "category": "General",
-      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim",
+      "description": "Lorem ipsum",
+      "review": "Review",
       "deletedAt": null
     },
     {
@@ -15,9 +17,11 @@
       "imgSrc": "../../assets/images/myfirstlove.jpg",
       "title": "My First Love",
       "author": "Name Surename",
+      "isbn": 1234,
       "year": 2000,
       "category": "General",
-      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim",
+      "description": "Lorem ipsum",
+      "review": "Review",
       "deletedAt": null
     },
     {
@@ -25,9 +29,11 @@
       "imgSrc": "../../assets/images/mylittlelove.jpg",
       "title": "My Litle Life",
       "author": "Name Surename",
+      "isbn": 1234,
       "year": 2005,
       "category": "General",
-      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim",
+      "description": "Lorem ipsum",
+      "review": "Review",
       "deletedAt": null
     },
     {
@@ -35,9 +41,11 @@
       "imgSrc": "../../assets/images/thelosttrip.jpg",
       "title": "The Lost Trip",
       "author": "Name Surename",
+      "isbn": 1234,
       "year": 2008,
       "category": "History",
-      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim",
+      "description": "Lorem ipsum",
+      "review": "Review",
       "deletedAt": null
     },
     {
@@ -45,9 +53,11 @@
       "imgSrc": "../../assets/images/dark.jpg",
       "title": "Dark",
       "author": "Name Surename",
+      "isbn": 1234,
       "year": 2018,
       "category": "Fantasy",
-      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim",
+      "description": "Lorem ipsum",
+      "review": "Review",
       "deletedAt": null
     },
     {
@@ -55,9 +65,11 @@
       "imgSrc": "../../assets/images/findme.jpg.png",
       "title": "Find Me",
       "author": "Name Surename",
+      "isbn": 1234,
       "year": 2021,
       "category": "Literary",
-      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim",
+      "description": "Lorem ipsum",
+      "review": "Review",
       "deletedAt": null
     }
   ],

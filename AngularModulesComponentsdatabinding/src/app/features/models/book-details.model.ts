@@ -6,6 +6,7 @@ export interface BookDetails {
   alt?: string;
   imgSrc: string;
   author: string;
+  isbn: number;
   year: number;
   category: Category;
   description: string;
