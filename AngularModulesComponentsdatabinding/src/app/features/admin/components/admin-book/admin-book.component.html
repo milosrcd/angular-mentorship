@@ -10,6 +10,9 @@
         </th>
         <td mat-cell *matCellDef="let book">
           <ng-container [ngSwitch]="column.name">
+            <ng-container *ngSwitchCase="'review'">
+              <span [matTooltip]="book.review">{{ book.review }}</span>
+            </ng-container>
             <ng-container *ngSwitchCase="'imgSrc'">
               <img [src]="book[column.property]" [alt]="book.title" />
             </ng-container>

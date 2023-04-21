@@ -7,6 +7,7 @@ import { MatTableModule } from '@angular/material/table';
 import { AdminBookComponent } from './components/admin-book/admin-book.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ReadMoreComponent } from './components/read-more/read-more.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ReadMoreComponent } from './components/read-more/read-more.component';
     SharedModule,
     MatPaginatorModule,
     MatTableModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTooltipModule
   ]
 })
 export class AdminModule { }
