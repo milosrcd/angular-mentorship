@@ -10,10 +10,9 @@ import { Categories } from 'src/app/core/interfaces/category.interface';
   styleUrls: ['./filter.component.scss'],
 })
 export class FilterComponent implements OnInit, OnDestroy {
-  // @Output() displayValue = new EventEmitter<string>();
   @Output() categorySelected = new EventEmitter<string>();
 
-  displayOption: string = '';
+  defaultValue = '';
 
   unsubscribe$: Subject<void> = new Subject<void>;
 
@@ -24,14 +23,22 @@ export class FilterComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.getCategories();
+
+    const filter: string | null = localStorage.getItem('filter');
+
+    if (filter) {
+     const stringToObj = JSON.parse(filter);
+     this.defaultValue = stringToObj.categoryName;
+    }
   }
 
-  onChange(event: Event){
+  onChange(event: Event) {
+    console.log((event.target as HTMLSelectElement).value);
     this.categorySelected.emit((event.target as HTMLSelectElement).value);
   }
 
   getOptionValue(event: any): void {
-    this.displayOption = event.target.value;
+    this.defaultValue = event.target.value;
   }
 
   private getCategories() {

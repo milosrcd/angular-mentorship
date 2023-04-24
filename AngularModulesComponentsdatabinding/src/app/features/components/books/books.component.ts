@@ -14,13 +14,12 @@ import { MatDialog } from '@angular/material/dialog';
 export class BooksComponent implements OnInit, OnDestroy {
   books: BookDetails[] = [];
   public displaySearch: string = '';
-  public displayValue: string = '';
+  public displayCategory: string = '';
 
   private unsubscribe$: Subject<void> = new Subject<void>;
 
   constructor(private activatedRouter: ActivatedRoute, private bookService: BookService, private matDialog: MatDialog) { }
 
-  private categoryName: string = '';
 
   ngOnInit(): void {
     this.getBooks();
@@ -30,11 +29,12 @@ export class BooksComponent implements OnInit, OnDestroy {
   }
 
   showValue(event: string) {
+    console.log(event);
     this.displaySearch = event;
   }
 
-  storeCategory(categoryName: string) {
-    this.categoryName = categoryName;
+  storeCategory(event: string) {
+    this.displayCategory = event;
   }
 
   deleteBook(book: BookDetails): void {
@@ -73,12 +73,12 @@ export class BooksComponent implements OnInit, OnDestroy {
       .subscribe(shouldSave => {
         console.log(shouldSave);
         console.log(this.displaySearch);
-        console.log(this.categoryName);
+        console.log(this.displayCategory);
 
         if (shouldSave) {
           const filter = {
             displaySearch: this.displaySearch,
-            categoryName: this.categoryName
+            displayCategory: this.displayCategory
           };
           const objToString = JSON.stringify(filter);
           localStorage.setItem('filter', objToString);
@@ -87,7 +87,7 @@ export class BooksComponent implements OnInit, OnDestroy {
       });
 
     localStorage.setItem('search', this.displaySearch);
-    localStorage.setItem('filter', this.categoryName);
+    localStorage.setItem('filter', this.displayCategory);
 
   }
 

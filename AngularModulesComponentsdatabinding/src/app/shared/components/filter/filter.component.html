@@ -3,10 +3,11 @@
     (change)="onChange($event)"
     placeholder="Filter by Category"
     multiple
+    [(ngModel)]="defaultValue"
   >
     <mat-option
       *ngFor="let category of categoriesList"
-      [value]="category"
+      [value]="category.name"
       >{{ category.name }}</mat-option
     >
   </mat-select>

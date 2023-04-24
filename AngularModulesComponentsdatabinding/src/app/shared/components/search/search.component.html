@@ -1,13 +1,12 @@
 <div class="search">
   <input
-    (keyup)="searchTerm($event)"
     type="text"
     title="Search"
     placeholder="Search by Book Name"
     id="searcBooks"
-    [value]="defaultValue"
+    [(ngModel)]="defaultValue"
   />
-  <button (click)="onClick()" id="search-btn">
+  <button type="button" (click)="onClick()" id="search-btn">
     <i class="fa fa-search" aria-hidden="true"></i>
   </button>
 </div>

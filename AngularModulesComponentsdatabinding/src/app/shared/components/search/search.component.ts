@@ -10,8 +10,6 @@ export class SearchComponent implements OnInit {
   @Output() displaySearch = new EventEmitter<string>();
 
   defaultValue = '';
-  private term: string = '';
-  // search = '';
 
   constructor() {
     const filter: string | null = localStorage.getItem('filter');
@@ -28,10 +26,7 @@ export class SearchComponent implements OnInit {
   }
 
   onClick(): void {
-    this.displaySearch.emit(this.term);
+    this.displaySearch.emit(this.defaultValue);
   }
 
-  searchTerm(event: any): void {
-    this.term = event.target.value;
-  }
 }
