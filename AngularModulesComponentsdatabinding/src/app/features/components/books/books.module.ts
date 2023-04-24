@@ -9,25 +9,26 @@ import { SingleBookComponent } from '../singlebook/singlebook.component';
 import { BookBackgroundDirective } from '../../directives/book-background.directive';
 import { BooksComponent } from './books.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
-    declarations: [
-      BookComponent,
-      BooksComponent,
-      SingleBookComponent,
-      BookBackgroundDirective
-    ],
-    exports: [
-        BookComponent,
-        BooksComponent
-    ],
-    imports: [
-        CommonModule,
-        MatCardModule,
-        SharedModule,
-        BooksRoutingModule,
-        HttpClientModule,
-    ]
+  declarations: [
+    BookComponent,
+    BooksComponent,
+    SingleBookComponent,
+    BookBackgroundDirective
+  ],
+  exports: [
+    BookComponent,
+    BooksComponent
+  ],
+  imports: [
+    CommonModule,
+    MatCardModule,
+    SharedModule,
+    BooksRoutingModule,
+    HttpClientModule,
+    MatDialogModule
+  ]
 })
 export class BooksModule { }

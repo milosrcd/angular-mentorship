@@ -9,19 +9,29 @@ export class SearchComponent implements OnInit {
 
   @Output() displaySearch = new EventEmitter<string>();
 
-  value = 'Search book by name';
-  search = '';
+  defaultValue = '';
+  private term: string = '';
+  // search = '';
 
-  constructor() { }
+  constructor() {
+    const filter: string | null = localStorage.getItem('filter');
+
+    if (filter) {
+      const stringToObj = JSON.parse(filter);
+      console.log(stringToObj);
+      this.defaultValue = stringToObj.displaySearch;
+    }
+
+  }
 
   ngOnInit(): void {
   }
 
   onClick(): void {
-    this.displaySearch.emit(this.search);
+    this.displaySearch.emit(this.term);
   }
 
-  outputSearch(event: any) {
-    this.search = event.target.value;
+  searchTerm(event: any): void {
+    this.term = event.target.value;
   }
 }

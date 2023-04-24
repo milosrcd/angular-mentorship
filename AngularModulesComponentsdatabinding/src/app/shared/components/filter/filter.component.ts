@@ -10,7 +10,9 @@ import { Categories } from 'src/app/core/interfaces/category.interface';
   styleUrls: ['./filter.component.scss'],
 })
 export class FilterComponent implements OnInit, OnDestroy {
-  @Output() displayValue = new EventEmitter<string>();
+  // @Output() displayValue = new EventEmitter<string>();
+  @Output() categorySelected = new EventEmitter<string>();
+
   displayOption: string = '';
 
   unsubscribe$: Subject<void> = new Subject<void>;
@@ -24,8 +26,8 @@ export class FilterComponent implements OnInit, OnDestroy {
     this.getCategories();
   }
 
-  onClick() {
-    this.displayValue.emit(this.displayOption);
+  onChange(event: Event){
+    this.categorySelected.emit((event.target as HTMLSelectElement).value);
   }
 
   getOptionValue(event: any): void {

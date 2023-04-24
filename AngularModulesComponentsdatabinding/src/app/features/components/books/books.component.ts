@@ -3,6 +3,8 @@ import { BookDetails } from '../../models/book-details.model';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BookService } from 'src/app/features/services/book.service';
+import { DialogSavedFiltersComponent } from '../dialog-saved-filters/dialog-saved-filters.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-books',
@@ -11,13 +13,28 @@ import { BookService } from 'src/app/features/services/book.service';
 })
 export class BooksComponent implements OnInit, OnDestroy {
   books: BookDetails[] = [];
+  public displaySearch: string = '';
+  public displayValue: string = '';
 
   private unsubscribe$: Subject<void> = new Subject<void>;
 
-  constructor(private activatedRouter: ActivatedRoute, private bookService: BookService) { }
+  constructor(private activatedRouter: ActivatedRoute, private bookService: BookService, private matDialog: MatDialog) { }
+
+  private categoryName: string = '';
 
   ngOnInit(): void {
     this.getBooks();
+
+    const savedSearch = localStorage.getItem('search');
+    const savedFilter = localStorage.getItem('filter');
+  }
+
+  showValue(event: string) {
+    this.displaySearch = event;
+  }
+
+  storeCategory(categoryName: string) {
+    this.categoryName = categoryName;
   }
 
   deleteBook(book: BookDetails): void {
@@ -51,6 +68,27 @@ export class BooksComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();
+    this.matDialog.open(DialogSavedFiltersComponent)
+      .afterClosed()
+      .subscribe(shouldSave => {
+        console.log(shouldSave);
+        console.log(this.displaySearch);
+        console.log(this.categoryName);
+
+        if (shouldSave) {
+          const filter = {
+            displaySearch: this.displaySearch,
+            categoryName: this.categoryName
+          };
+          const objToString = JSON.stringify(filter);
+          localStorage.setItem('filter', objToString);
+          console.log('Filter saved to local storage:', filter);
+        }
+      });
+
+    localStorage.setItem('search', this.displaySearch);
+    localStorage.setItem('filter', this.categoryName);
+
   }
 
 }

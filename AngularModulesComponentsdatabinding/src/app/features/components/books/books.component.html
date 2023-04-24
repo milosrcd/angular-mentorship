@@ -3,17 +3,21 @@
   <app-headline></app-headline>
   <form class="search-category" id="search-category-form">
     <!--Search component-->
-    <app-search></app-search>
+    <app-search (displaySearch)="showValue($event)"></app-search>
     <!--Search component ends-->
 
     <!-- FILTER CATEGORIES -->
-    <app-filter></app-filter>
+    <app-filter (categorySelected)="storeCategory($event)"></app-filter>
     <!--filter component ends-->
   </form>
   <!--Books-->
   <div class="books">
     <ng-container *ngFor="let book of books">
-      <app-book [book]="book" (delete)="deleteBook(book)" (softDelete)="softDeleteBook(book)"></app-book>
+      <app-book
+        [book]="book"
+        (delete)="deleteBook(book)"
+        (softDelete)="softDeleteBook(book)"
+      ></app-book>
     </ng-container>
   </div>
   <!--Books end-->
