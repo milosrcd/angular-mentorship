@@ -1,6 +1,6 @@
 <mat-form-field class="filter" appearance="fill">
   <mat-select
-    (change)="onChange($event)"
+    (selectionChange)="onChange($event)"
     placeholder="Filter by Category"
     multiple
     [(ngModel)]="defaultValue"

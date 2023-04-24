@@ -3,6 +3,7 @@ import { Subject, takeUntil } from 'rxjs';
 import { Category } from '../../../features/models/category.enum';
 import { Component, OnInit, Output, EventEmitter, OnDestroy } from '@angular/core';
 import { Categories } from 'src/app/core/interfaces/category.interface';
+import { MatSelectChange } from '@angular/material/select';
 
 @Component({
   selector: 'app-filter',
@@ -32,13 +33,8 @@ export class FilterComponent implements OnInit, OnDestroy {
     }
   }
 
-  onChange(event: Event) {
-    console.log((event.target as HTMLSelectElement).value);
-    this.categorySelected.emit((event.target as HTMLSelectElement).value);
-  }
-
-  getOptionValue(event: any): void {
-    this.defaultValue = event.target.value;
+  onChange(event: MatSelectChange){
+    this.categorySelected.emit(event.value.join(','));
   }
 
   private getCategories() {
