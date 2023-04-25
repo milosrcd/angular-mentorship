@@ -13,6 +13,9 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
 import { MatMenuModule } from '@angular/material/menu';
 import { AppRoutingModule } from '../app-routing.module';
+import { LoginComponent } from './auth/login/login.component';
+import { MatCardModule } from '@angular/material/card';
+import { LayoutPageComponent } from './components/layout-page/layout-page.component';
 
 
 
@@ -22,8 +25,17 @@ import { AppRoutingModule } from '../app-routing.module';
     FooterComponent,
     SidebarComponent,
     NotFoundComponent,
+    LoginComponent,
+    LayoutPageComponent,
   ],
-  exports: [HeaderComponent, FooterComponent, SidebarComponent],
+  exports: [
+    HeaderComponent,
+    FooterComponent,
+    SidebarComponent,
+    LoginComponent,
+    NotFoundComponent,
+    LayoutPageComponent
+  ],
   imports: [
     CommonModule,
     MatSidenavModule,
@@ -34,6 +46,7 @@ import { AppRoutingModule } from '../app-routing.module';
     MatSelectModule,
     MatMenuModule,
     RouterModule,
-    AppRoutingModule]
+    AppRoutingModule,
+    MatCardModule]
 })
 export class CoreModule { }

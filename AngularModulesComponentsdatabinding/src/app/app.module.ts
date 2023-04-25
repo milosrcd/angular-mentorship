@@ -9,6 +9,7 @@ import { DialogSavedFiltersComponent } from './features/components/dialog-saved-
 import { ExitBookModalComponent } from './features/components/exit-book-modal/exit-book-modal.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpRequestInterceptor } from './features/interceptors/http-request.interceptor';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { HttpRequestInterceptor } from './features/interceptors/http-request.int
     CoreModule,
     BrowserAnimationsModule,
     BooksModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule
   ],
   providers: [
     {

@@ -16,7 +16,7 @@ export class HttpRequestInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     request = request.clone({
       headers: new HttpHeaders({
-        ApplicationName: "GooldenBook"
+        ApplicationName: "GoldenBook"
       })
     })
     return next.handle(request);

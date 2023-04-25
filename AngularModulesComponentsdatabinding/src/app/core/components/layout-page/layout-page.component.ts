@@ -1,20 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
-import { SidebarService } from './core/services/sidebar.service';
+import { SidebarService } from '../../services/sidebar.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-layout-page',
+  templateUrl: './layout-page.component.html',
+  styleUrls: ['./layout-page.component.scss']
 })
-export class AppComponent {
-  isSidebarVisible: boolean = true;
+export class LayoutPageComponent implements OnInit {
+  isSidebarVisible: boolean = false;
   private unsubscribe$: Subject<void> = new Subject<void>;
 
   constructor(private sidebarService: SidebarService) { }
 
   ngOnInit(): void {
-    this.toggleVisable();
+    this.toggleVisible();
   }
 
   ngOnDestroy(): void {
@@ -22,10 +22,11 @@ export class AppComponent {
     this.unsubscribe$.complete();
   }
 
-  private toggleVisable(): void {
+  private toggleVisible(): void {
     this.sidebarService.toggleSidenav$
       .asObservable()
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe((value) => this.isSidebarVisible = value);
   }
+
 }
