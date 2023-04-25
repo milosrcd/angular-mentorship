@@ -1,7 +1,7 @@
 import { BookDetails } from 'src/app/features/models/book-details.model';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, map, of, throwError } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '@env';
 
 @Injectable({
@@ -27,7 +27,12 @@ export class BookService {
   }
 
   getBookById(id: number): Observable<BookDetails> {
-    return this.httpClient.get<BookDetails>(`${environment.baseApiUrl}books/${id}`);
+    return this.httpClient.get<BookDetails>(`${environment.baseApiUrl}books/${id}`,
+      {
+        headers: new HttpHeaders({
+          PageName: 'BookOverview',
+        }),
+      });
   }
 
   delete(book: BookDetails): Observable<BookDetails> {
