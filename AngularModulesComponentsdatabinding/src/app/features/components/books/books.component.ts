@@ -68,26 +68,26 @@ export class BooksComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();
-    this.matDialog.open(DialogSavedFiltersComponent)
-      .afterClosed()
-      .subscribe(shouldSave => {
-        console.log(shouldSave);
-        console.log(this.displaySearch);
-        console.log(this.displayCategory);
+    // this.matDialog.open(DialogSavedFiltersComponent)
+    //   .afterClosed()
+    //   .subscribe(shouldSave => {
+    //     console.log(shouldSave);
+    //     console.log(this.displaySearch);
+    //     console.log(this.displayCategory);
 
-        if (shouldSave) {
-          const filter = {
-            displaySearch: this.displaySearch,
-            displayCategory: this.displayCategory
-          };
-          const objToString = JSON.stringify(filter);
-          localStorage.setItem('filter', objToString);
-          console.log('Filter saved to local storage:', filter);
-        }
-      });
+        // if (shouldSave) {
+        //   const filter = {
+        //     displaySearch: this.displaySearch,
+        //     displayCategory: this.displayCategory
+        //   };
+        //   const objToString = JSON.stringify(filter);
+        //   localStorage.setItem('filter', objToString);
+        //   console.log('Filter saved to local storage:', filter);
+        // }
+    //   });
 
-    localStorage.setItem('search', this.displaySearch);
-    localStorage.setItem('filter', this.displayCategory);
+    // localStorage.setItem('search', this.displaySearch);
+    // localStorage.setItem('filter', this.displayCategory);
 
   }
 
