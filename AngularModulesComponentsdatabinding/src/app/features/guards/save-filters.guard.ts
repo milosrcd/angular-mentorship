@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRouteSnapshot, CanDeactivate, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable, map } from 'rxjs';
-import { DialogSavedFiltersComponent } from '../dialog-saved-filters/dialog-saved-filters.component';
-import { BooksComponent } from '../books/books.component';
+import { DialogSavedFiltersComponent } from '../components/dialog-saved-filters/dialog-saved-filters.component';
+import { BooksComponent } from '../components/books/books.component';
 
 @Injectable({
   providedIn: 'root'

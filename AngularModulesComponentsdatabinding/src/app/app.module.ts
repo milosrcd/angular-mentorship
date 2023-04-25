@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { DialogSavedFiltersComponent } from './features/components/dialog-saved-filters/dialog-saved-filters.component';
 import { ExitBookModalComponent } from './features/components/exit-book-modal/exit-book-modal.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpRequestInterceptor } from './features/interceptors/http-request.interceptor';
 
 
 @NgModule({
@@ -18,7 +20,13 @@ import { ExitBookModalComponent } from './features/components/exit-book-modal/ex
     BooksModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpRequestInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

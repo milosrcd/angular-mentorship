@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { CanDeactivate, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable, map } from 'rxjs';
-import { SingleBookComponent } from '../singlebook/singlebook.component';
-import { ExitBookModalComponent } from '../exit-book-modal/exit-book-modal.component';
+import { SingleBookComponent } from '../components/singlebook/singlebook.component';
+import { ExitBookModalComponent } from '../components/exit-book-modal/exit-book-modal.component';
 import { MatDialog } from '@angular/material/dialog';
 
 @Injectable({
