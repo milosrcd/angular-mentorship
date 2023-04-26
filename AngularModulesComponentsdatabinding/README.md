@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Run local app
 
-`npm run start-our-app`
+`npm run start-gb-app`
 `npm run start-db`
 
 ## Development server

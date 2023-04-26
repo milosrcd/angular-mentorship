@@ -5,7 +5,6 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { BooksModule } from "../features/components/books/books.module";
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
@@ -38,7 +37,6 @@ import { LayoutPageComponent } from './layouts/layout-page/layout-page.component
   imports: [
     CommonModule,
     MatSidenavModule,
-    BooksModule,
     MatIconModule,
     MatListModule,
     MatExpansionModule,
