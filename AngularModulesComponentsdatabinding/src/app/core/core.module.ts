@@ -12,10 +12,11 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
 import { MatMenuModule } from '@angular/material/menu';
 import { AppRoutingModule } from '../app-routing.module';
-import { LoginComponent } from './auth/login/login.component';
+import { LoginComponent } from './auth/components/login/login.component';
 import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import { LayoutPageComponent } from './components/layout-page/layout-page.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -45,6 +46,8 @@ import { LayoutPageComponent } from './components/layout-page/layout-page.compon
     MatMenuModule,
     RouterModule,
     AppRoutingModule,
-    MatCardModule]
+    MatCardModule,
+    FormsModule
+  ]
 })
 export class CoreModule { }

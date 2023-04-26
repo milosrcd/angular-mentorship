@@ -1,8 +1,9 @@
 import { NotFoundComponent } from './core/components/not-found/not-found.component';
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './core/auth/login/login.component';
+import { LoginComponent } from './core/auth/components/login/login.component';
 import { LayoutPageComponent } from './core/components/layout-page/layout-page.component';
+import { AuthGuard } from './core/auth/guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -21,7 +22,8 @@ const routes: Routes = [
         path: 'categories',
         loadChildren: () => import('../app/core/core.module').then((module) => module.CoreModule),
       },
-    ]
+    ],
+    canActivate: [AuthGuard],
   },
   {
     path: 'login',
