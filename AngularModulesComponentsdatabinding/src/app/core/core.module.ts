@@ -15,7 +15,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { AppRoutingModule } from '../app-routing.module';
 import { LoginComponent } from './auth/login/login.component';
 import { MatCardModule } from '@angular/material/card';
-import { LayoutPageComponent } from './components/layout-page/layout-page.component';
+import { LayoutPageComponent } from './layout/layout-page/layout-page.component';
 
 
 

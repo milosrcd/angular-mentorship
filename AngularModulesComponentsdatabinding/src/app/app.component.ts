@@ -13,19 +13,5 @@ export class AppComponent {
 
   constructor(private sidebarService: SidebarService) { }
 
-  ngOnInit(): void {
-    this.toggleVisable();
-  }
-
-  ngOnDestroy(): void {
-    this.unsubscribe$.next();
-    this.unsubscribe$.complete();
-  }
-
-  private toggleVisable(): void {
-    this.sidebarService.toggleSidenav$
-      .asObservable()
-      .pipe(takeUntil(this.unsubscribe$))
-      .subscribe((value) => this.isSidebarVisible = value);
-  }
+  ngOnInit(): void { }
 }
