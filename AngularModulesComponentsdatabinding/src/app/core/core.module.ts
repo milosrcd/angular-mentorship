@@ -15,7 +15,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { AppRoutingModule } from '../app-routing.module';
 import { LoginComponent } from './auth/login/login.component';
 import { MatCardModule } from '@angular/material/card';
-import { LayoutPageComponent } from './layout/layout-page/layout-page.component';
+import { LayoutPageComponent } from './layouts/layout-page/layout-page.component';
 
 
 
@@ -26,7 +26,7 @@ import { LayoutPageComponent } from './layout/layout-page/layout-page.component'
     SidebarComponent,
     NotFoundComponent,
     LoginComponent,
-    LayoutPageComponent,
+    LayoutPageComponent
   ],
   exports: [
     HeaderComponent,
@@ -34,7 +34,6 @@ import { LayoutPageComponent } from './layout/layout-page/layout-page.component'
     SidebarComponent,
     LoginComponent,
     NotFoundComponent,
-    LayoutPageComponent
   ],
   imports: [
     CommonModule,

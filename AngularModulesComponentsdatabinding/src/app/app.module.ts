@@ -1,6 +1,5 @@
 import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BooksModule } from './features/components/books/books.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -18,7 +17,6 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     CoreModule,
     BrowserAnimationsModule,
-    BooksModule,
     AppRoutingModule,
     SharedModule
   ],

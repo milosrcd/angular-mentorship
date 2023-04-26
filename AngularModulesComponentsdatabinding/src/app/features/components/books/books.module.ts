@@ -19,8 +19,6 @@ import { MatDialogModule } from '@angular/material/dialog';
     BookBackgroundDirective
   ],
   exports: [
-    BookComponent,
-    BooksComponent
   ],
   imports: [
     CommonModule,
