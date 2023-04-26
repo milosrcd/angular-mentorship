@@ -14,8 +14,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { AppRoutingModule } from '../app-routing.module';
 import { LoginComponent } from './auth/login/login.component';
 import { MatCardModule } from '@angular/material/card';
-import { LayoutPageComponent } from './layouts/layout-page/layout-page.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { LayoutPageComponent } from './components/layout-page/layout-page.component';
 
 
 @NgModule({
@@ -33,6 +33,7 @@ import { LayoutPageComponent } from './layouts/layout-page/layout-page.component
     SidebarComponent,
     LoginComponent,
     NotFoundComponent,
+    HttpClientModule
   ],
   imports: [
     CommonModule,

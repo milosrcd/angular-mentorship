@@ -1,5 +1,4 @@
 import { BooksRoutingModule } from './books-routing.module';
-import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
@@ -10,6 +9,8 @@ import { BookBackgroundDirective } from '../../directives/book-background.direct
 import { BooksComponent } from './books.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { MatDialogModule } from '@angular/material/dialog';
+import { SaveFiltersGuard } from '../../guards/save-filters.guard';
+import { ConfirmDeactivateGuardGuard } from '../../guards/confirm-deactivate-guard.guard';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,11 @@ import { MatDialogModule } from '@angular/material/dialog';
     BooksRoutingModule,
     HttpClientModule,
     MatDialogModule
+  ],
+  providers: [
+    HttpClientModule,
+    SaveFiltersGuard,
+    ConfirmDeactivateGuardGuard
   ]
 })
 export class BooksModule { }

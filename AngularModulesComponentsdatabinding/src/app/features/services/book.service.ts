@@ -1,8 +1,9 @@
 import { BookDetails } from 'src/app/features/models/book-details.model';
 import { Injectable } from '@angular/core';
-import { Observable, catchError, map, of, throwError } from 'rxjs';
+import { Observable, map, of, throwError } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '@env';
+import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
