@@ -18,4 +18,9 @@ export class HeaderComponent implements OnInit {
     this.visible = !this.visible;
     this.sidebarService.toggleSidenav$.next(this.visible);
   }
+
+  logOut(){
+    localStorage.removeItem('logged_user');
+    location.reload();
+  }
 }
