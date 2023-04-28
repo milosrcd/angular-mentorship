@@ -22,7 +22,6 @@ export class LoginComponent implements OnInit {
   }
 
   loginUser(){
-    console.log(this.form);
     this.authService.login(this.form)
     .pipe(take(1))
     .subscribe((data: any) => {
