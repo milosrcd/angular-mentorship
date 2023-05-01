@@ -112,5 +112,31 @@
       "country": "Montenegro",
       "role": "user"
     }
+  ],
+  "countries": [
+    {
+      "id": 1,
+      "name": "Serbia"
+    },
+    {
+      "id": 2,
+      "name": "Montenegro"
+    },
+    {
+      "id": 3,
+      "name": "Italy"
+    },
+    {
+      "id": 4,
+      "name": "Spain"
+    },
+    {
+      "id":5,
+      "name": "United Kingdom"
+    },
+    {
+      "id": 6,
+      "name": "Germany"
+    }
   ]
 }

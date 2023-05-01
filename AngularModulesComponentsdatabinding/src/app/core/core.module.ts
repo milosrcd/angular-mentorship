@@ -16,7 +16,8 @@ import { LoginComponent } from './auth/components/login/login.component';
 import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import { LayoutPageComponent } from './components/layout-page/layout-page.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RegisterComponent } from './auth/components/register/register.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { FormsModule } from '@angular/forms';
     SidebarComponent,
     NotFoundComponent,
     LoginComponent,
-    LayoutPageComponent
+    LayoutPageComponent,
+    RegisterComponent
   ],
   exports: [
     HeaderComponent,
@@ -47,7 +49,8 @@ import { FormsModule } from '@angular/forms';
     RouterModule,
     AppRoutingModule,
     MatCardModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class CoreModule { }

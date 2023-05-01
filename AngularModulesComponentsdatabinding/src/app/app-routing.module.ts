@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './core/auth/components/login/login.component';
 import { LayoutPageComponent } from './core/components/layout-page/layout-page.component';
 import { AuthGuard } from './core/auth/guards/auth.guard';
+import { RegisterComponent } from './core/auth/components/register/register.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
   },
   {
     path: '**',

@@ -1,0 +1,46 @@
+<mat-card>
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <label>
+      First Name:
+      <input type="text" formControlName="firstName"/>
+      <span *ngIf="profileForm.controls.firstName.errors?.['required']">First Name is Required</span>
+    </label>
+    <br />
+    <label>
+      Last Name:
+      <input type="text" formControlName="lastName"/>
+      <span *ngIf="profileForm.controls.lastName.errors?.['required']">Last Name is Required</span>
+    </label>
+    <br />
+    <label>
+      Email:
+      <input type="email" formControlName="email"/>
+      <span *ngIf="profileForm.controls.email.errors?.['required']">email is Required</span>
+      <span *ngIf="profileForm.controls.email.errors?.['email']">Invalid email form</span>
+    </label>
+    <br />
+    <label>
+      Password:
+      <input type="password" formControlName="password"/>
+    </label>
+    <br />
+    <label>
+      Confirm Password:
+      <input type="password" formControlName="confirmPassword"/>
+    </label>
+    <br />
+    <mat-label>Select Country:</mat-label>
+    <hr>
+    <mat-select formControlName="countries">
+      <mat-option *ngFor="let country of countryList" [value]="country">
+        {{ country.name }}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="profileForm.controls.countries.hasError('required')"
+      >Please select Country</mat-error
+    >
+    <br />
+    <hr>
+    <button [disabled]="profileForm.invalid" type="submit">Register</button>
+  </form>
+</mat-card>
