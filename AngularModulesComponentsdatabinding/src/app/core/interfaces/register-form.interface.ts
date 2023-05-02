@@ -1,6 +1,7 @@
 export interface LoginForm {
   email: string,
   password: string
+  role: string
 }
 
 export interface RegisterForm extends LoginForm {
@@ -8,5 +9,5 @@ export interface RegisterForm extends LoginForm {
   firstName: string,
   lastName: string,
   countries: string
-  role: string
+
 }

@@ -2,6 +2,7 @@
 
 @import "https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@1,400;1,500;1,600;1,700;1,800;1,900&family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap";
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css";
+@import "/src/app/styles/variables";
 
 html {
   height: 100%;
@@ -15,6 +16,53 @@ html {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-body{
+body {
   background-color: transparent !important;
+}
+
+.login,
+.register {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 8vh;
+
+  mat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+    border: none;
+
+    input {
+      margin-top: 8px;
+      color: $darkbrown;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    button {
+      margin: 25px 50px;
+      letter-spacing: 2px;
+      padding: 3px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      text-align: center;
+      background-color: gray;
+      color: $beige;
+      display: inline-block;
+    }
+    span {
+      color: $darkbrown;
+    }
+    mat-label {
+      color: $darkbrown;
+    }
+  }
+
+  .text-container {
+    color: $beige;
+  }
 }

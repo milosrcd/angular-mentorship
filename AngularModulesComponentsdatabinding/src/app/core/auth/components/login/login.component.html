@@ -1,19 +1,24 @@
-<mat-card>
-  <form (ngSubmit)="onSubmit()">
-    <input
-      type="email"
-      placeholder="Email"
-      name="email"
-      [(ngModel)]="form.email"
-    />
-    <br />
-    <input
-      type="password"
-      placeholder="Password"
-      name="password"
-      [(ngModel)]="form.password"
-    />
-    <br />
-    <button type="submit">Login</button>
-  </form>
-</mat-card>
+<div class="login">
+  <mat-card>
+    <form (ngSubmit)="onSubmit()">
+      <input
+        type="email"
+        placeholder="Email"
+        name="email"
+        [(ngModel)]="form.email"
+      />
+      <br />
+      <input
+        type="password"
+        placeholder="Password"
+        name="password"
+        [(ngModel)]="form.password"
+      />
+      <br />
+      <button type="submit">Login</button>
+    </form>
+    <div class="text-container">
+      If you dont have account <span [routerLink]="['/register']">Register here</span>
+    </div>
+  </mat-card>
+</div>
