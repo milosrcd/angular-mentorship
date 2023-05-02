@@ -100,7 +100,7 @@
       "lastName": "Radosavljevic",
       "email": "milos@gmail.com",
       "password": "11111111",
-      "country": "Serbia",
+      "countryId": 1,
       "role": "admin"
     },
     {
@@ -109,8 +109,82 @@
       "lastName": "Manojlovic",
       "email": "tamara@gmail.com",
       "password": "22222222",
-      "country": "Montenegro",
+      "countryId": 2,
       "role": "user"
+    },
+    {
+      "firstName": "Milos",
+      "lastName": "Radosavljevic",
+      "email": "milosrcd@gmail.com",
+      "password": "11111111",
+      "confirmPassword": "11111111",
+      "countries": {
+        "id": 5,
+        "name": "United Kingdom"
+      },
+      "id": 3
+    },
+    {
+      "firstName": "Milos",
+      "lastName": "Radosavljevic",
+      "email": "milosrcd@gmail.com",
+      "password": "11111111",
+      "confirmPassword": "11111111",
+      "countries": {
+        "id": 5,
+        "name": "United Kingdom"
+      },
+      "id": 4
+    },
+    {
+      "firstName": "Milos",
+      "lastName": "Radosavljevic",
+      "email": "milosrcd@gmail.com",
+      "password": "12121212",
+      "confirmPassword": "12121212",
+      "countries": {
+        "id": 4,
+        "name": "Spain"
+      },
+      "id": 5
+    },
+    {
+      "firstName": "Milos",
+      "lastName": "Radosavljevic",
+      "email": "milosrcd@gmail.com",
+      "password": "12121212",
+      "confirmPassword": "12121212",
+      "countries": {
+        "id": 1,
+        "name": "Serbia"
+      },
+      "id": 6
+    },
+    {
+      "firstName": "Andrija",
+      "lastName": "Mrsa",
+      "email": "milosbjj@gmail.com",
+      "password": "22222222",
+      "confirmPassword": "22222222",
+      "countries": {
+        "id": 3,
+        "name": "Italy"
+      },
+      "role": "user",
+      "id": 7
+    },
+    {
+      "firstName": "Petar",
+      "lastName": "Petrovic",
+      "email": "petar@gmail.com",
+      "password": "12345678",
+      "confirmPassword": "12345678",
+      "countries": {
+        "id": 2,
+        "name": "Montenegro"
+      },
+      "role": "user",
+      "id": 8
     }
   ],
   "countries": [
@@ -131,7 +205,7 @@
       "name": "Spain"
     },
     {
-      "id":5,
+      "id": 5,
       "name": "United Kingdom"
     },
     {

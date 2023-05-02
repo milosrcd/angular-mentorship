@@ -13,5 +13,9 @@ export class AuthService {
   login(user: LoginForm) {
     return this.httpClient.get(`${environment.baseApiUrl}users?email=${user.email}&password=${user.password}`);
   }
+
+  register(user: RegisterForm){
+    return this.httpClient.post(`${environment.baseApiUrl}users`, user);
+  }
 }
 

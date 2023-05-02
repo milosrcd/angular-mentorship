@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Countries } from 'src/app/core/interfaces/countries.interface';
 import { CountryService } from '../../services/country.service';
+import { AuthService } from '../../services/auth.service';
+import { RegisterForm } from 'src/app/core/interfaces/register-form.interface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -24,10 +27,25 @@ export class RegisterComponent implements OnInit {
 
   private unsubscribe$: Subject<void> = new Subject<void>;
 
-  constructor(private countryService: CountryService) { }
+  constructor(private countryService: CountryService, private authService: AuthService, private router: Router) { }
 
   onSubmit() {
-    console.log('profile form: ', this.profileForm);
+    const formData = this.profileForm.value as RegisterForm;
+    console.log(this.profileForm);
+    const user: RegisterForm = {
+      ...formData,
+      firstName: formData.firstName || '',
+      lastName: formData.lastName || '',
+      email: formData.email || '',
+      password: formData.password || '',
+      confirmPassword: formData.confirmPassword || '',
+      countries: formData.countries || '',
+      role: 'user'
+    };
+    this.authService.register(user)
+    .subscribe((data: any) => {
+      this.router.navigateByUrl('/login');
+    });
   }
 
   getErrorMessage() {
@@ -37,6 +55,8 @@ export class RegisterComponent implements OnInit {
 
     return this.profileForm.controls.email.hasError('email') ? 'Not a valid email' : '';
   }
+
+
   ngOnInit(): void {
     this.getCountries();
   }
