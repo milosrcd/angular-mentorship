@@ -185,6 +185,19 @@
       },
       "role": "user",
       "id": 8
+    },
+    {
+      "firstName": "Milos",
+      "lastName": "Radosavljevic",
+      "email": "milosrcd@gmail.com",
+      "password": "22223333",
+      "confirmPassword": "22223333",
+      "countries": {
+        "id": 3,
+        "name": "Italy"
+      },
+      "role": "user",
+      "id": 9
     }
   ],
   "countries": [
