@@ -1,3 +1,4 @@
+import { CanActivate } from '@angular/router';
 import { AdminLink } from './../../interfaces/admin-link.interface';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Category } from 'src/app/features/models/category.enum';
@@ -5,6 +6,7 @@ import { Admin } from 'src/app/features/models/admin.enum';
 import { Categories } from '../../interfaces/category.interface';
 import { CategoryService } from '../../services/category.service';
 import { Subject, map, takeUntil } from 'rxjs';
+import { AuthAdminGuard } from '../../auth/guards/auth-admin.guard';
 
 @Component({
   selector: 'app-sidebar',
@@ -24,11 +26,13 @@ export class SidebarComponent implements OnInit, OnDestroy {
   adminList: AdminLink[] = [
     {
       linkName: Admin.books,
-      path: 'book'
+      path: 'book',
+      canActivate: [AuthAdminGuard]
     },
     {
       linkName: Admin.categories,
-      path: 'categories'
+      path: 'categories',
+      canActivate: [AuthAdminGuard]
     }
   ];
   constructor(private categoryService: CategoryService) { }

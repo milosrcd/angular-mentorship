@@ -5,13 +5,10 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuard implements CanActivate, CanLoad {
+export class AuthGuard implements CanActivate {
 
   constructor(private router: Router) { }
 
-  canLoad(): boolean {
-    return this.isAuthenticated();
-  }
 
   canActivate(): boolean {
 
@@ -28,5 +25,4 @@ export class AuthGuard implements CanActivate, CanLoad {
       return true;
     }
   }
-
 }
