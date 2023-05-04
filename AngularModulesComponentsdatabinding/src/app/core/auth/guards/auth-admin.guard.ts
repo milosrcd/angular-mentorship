@@ -15,10 +15,9 @@ export class AuthAdminGuard implements CanActivate {
 
   private isAuthenticatedRole(): boolean {
     const logged_user = localStorage.getItem('logged_user');
-    const logged_user_role = localStorage.getItem('logged_user.role');
+    const loggedUser = JSON.parse(logged_user!);
 
-    if (logged_user && logged_user_role !== 'user') {
-      this.route.navigateByUrl('/login');
+    if (loggedUser.role === 'user') {
       return false;
     } else {
       return true;
