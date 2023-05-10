@@ -6,7 +6,7 @@
       "title": "Money Power",
       "author": "Name Surename",
       "isbn": 1234,
-      "year": 1998,
+      "year": "1.4.1987",
       "category": "General",
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim",
       "deletedAt": null
@@ -17,7 +17,7 @@
       "title": "My First Love",
       "author": "Name Surename",
       "isbn": 1234,
-      "year": 2000,
+      "year":"4.1.1987",
       "category": "General",
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim",
       "deletedAt": null
@@ -28,7 +28,7 @@
       "title": "My Litle Life",
       "author": "Name Surename",
       "isbn": 1234,
-      "year": 2005,
+      "year":"10.12.2000",
       "category": "General",
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim",
       "deletedAt": null
@@ -39,7 +39,7 @@
       "title": "The Lost Trip",
       "author": "Name Surename",
       "isbn": 1234,
-      "year": 2008,
+      "year":"15.2.1956",
       "category": "History",
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim",
       "deletedAt": null
@@ -50,7 +50,7 @@
       "title": "Dark",
       "author": "Name Surename",
       "isbn": 1234,
-      "year": 2018,
+      "year":"3.2.1941",
       "category": "Fantasy",
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim",
       "deletedAt": null
@@ -61,7 +61,7 @@
       "title": "Find Me",
       "author": "Name Surename",
       "isbn": 1234,
-      "year": 2021,
+      "year":"6.6.1966",
       "category": "Literary",
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim",
       "deletedAt": null
@@ -111,93 +111,6 @@
       "password": "22222222",
       "countryId": 2,
       "role": "user"
-    },
-    {
-      "firstName": "Milos",
-      "lastName": "Radosavljevic",
-      "email": "milosrcd@gmail.com",
-      "password": "11111111",
-      "confirmPassword": "11111111",
-      "countries": {
-        "id": 5,
-        "name": "United Kingdom"
-      },
-      "id": 3
-    },
-    {
-      "firstName": "Milos",
-      "lastName": "Radosavljevic",
-      "email": "milosrcd@gmail.com",
-      "password": "11111111",
-      "confirmPassword": "11111111",
-      "countries": {
-        "id": 5,
-        "name": "United Kingdom"
-      },
-      "id": 4
-    },
-    {
-      "firstName": "Milos",
-      "lastName": "Radosavljevic",
-      "email": "milosrcd@gmail.com",
-      "password": "12121212",
-      "confirmPassword": "12121212",
-      "countries": {
-        "id": 4,
-        "name": "Spain"
-      },
-      "id": 5
-    },
-    {
-      "firstName": "Milos",
-      "lastName": "Radosavljevic",
-      "email": "milosrcd@gmail.com",
-      "password": "12121212",
-      "confirmPassword": "12121212",
-      "countries": {
-        "id": 1,
-        "name": "Serbia"
-      },
-      "id": 6
-    },
-    {
-      "firstName": "Andrija",
-      "lastName": "Mrsa",
-      "email": "milosbjj@gmail.com",
-      "password": "22222222",
-      "confirmPassword": "22222222",
-      "countries": {
-        "id": 3,
-        "name": "Italy"
-      },
-      "role": "user",
-      "id": 7
-    },
-    {
-      "firstName": "Petar",
-      "lastName": "Petrovic",
-      "email": "petar@gmail.com",
-      "password": "12345678",
-      "confirmPassword": "12345678",
-      "countries": {
-        "id": 2,
-        "name": "Montenegro"
-      },
-      "role": "user",
-      "id": 8
-    },
-    {
-      "firstName": "Milos",
-      "lastName": "Radosavljevic",
-      "email": "milosrcd@gmail.com",
-      "password": "22223333",
-      "confirmPassword": "22223333",
-      "countries": {
-        "id": 3,
-        "name": "Italy"
-      },
-      "role": "user",
-      "id": 9
     },
     {
       "firstName": "Milos",
