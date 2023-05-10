@@ -1,7 +1,5 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { BookDetails } from '../../models/book-details.model';
-import { BookService } from '../../services/book.service';
-import { Subject, switchMap, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-book',

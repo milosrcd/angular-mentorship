@@ -5,6 +5,7 @@
     placeholder="Search by Book Name"
     id="searcBooks"
     [(ngModel)]="defaultValue"
+    [value]="defaultValue | lowercase"
   />
   <button type="button" (click)="onClick()" id="search-btn">
     <i class="fa fa-search" aria-hidden="true"></i>

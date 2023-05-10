@@ -21,6 +21,7 @@ import { RegisterComponent } from './auth/components/register/register.component
 import { CheckValidityPipe } from './auth/pipes/check-validity.pipe';
 import { HasErrorPipe } from './auth/pipes/has-error.pipe';
 import { FullNamePipe } from './auth/pipes/full-name.pipe';
+import { LowerCasePipe } from './auth/pipes/lower-case.pipe';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { FullNamePipe } from './auth/pipes/full-name.pipe';
     RegisterComponent,
     CheckValidityPipe,
     HasErrorPipe,
+    LowerCasePipe,
   ],
   exports: [
     HeaderComponent,
