@@ -20,6 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './auth/components/register/register.component';
 import { CheckValidityPipe } from './auth/pipes/check-validity.pipe';
 import { HasErrorPipe } from './auth/pipes/has-error.pipe';
+import { FullNamePipe } from './auth/pipes/full-name.pipe';
 
 
 @NgModule({
@@ -32,7 +33,7 @@ import { HasErrorPipe } from './auth/pipes/has-error.pipe';
     LayoutPageComponent,
     RegisterComponent,
     CheckValidityPipe,
-    HasErrorPipe
+    HasErrorPipe,
   ],
   exports: [
     HeaderComponent,
@@ -40,7 +41,7 @@ import { HasErrorPipe } from './auth/pipes/has-error.pipe';
     SidebarComponent,
     LoginComponent,
     NotFoundComponent,
-    HttpClientModule
+    HttpClientModule,
   ],
   imports: [
     CommonModule,

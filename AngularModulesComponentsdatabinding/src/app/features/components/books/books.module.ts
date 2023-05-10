@@ -11,13 +11,15 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { MatDialogModule } from '@angular/material/dialog';
 import { SaveFiltersGuard } from '../../guards/save-filters.guard';
 import { ConfirmDeactivateGuardGuard } from '../../guards/confirm-deactivate-guard.guard';
+import { FullNamePipe } from 'src/app/core/auth/pipes/full-name.pipe';
 
 @NgModule({
   declarations: [
     BookComponent,
     BooksComponent,
     SingleBookComponent,
-    BookBackgroundDirective
+    BookBackgroundDirective,
+    FullNamePipe
   ],
   exports: [
   ],
@@ -27,7 +29,7 @@ import { ConfirmDeactivateGuardGuard } from '../../guards/confirm-deactivate-gua
     SharedModule,
     BooksRoutingModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
   ],
   providers: [
     HttpClientModule,
