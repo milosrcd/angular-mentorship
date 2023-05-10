@@ -4,6 +4,7 @@ import { Admin } from 'src/app/features/models/admin.enum';
 import { Categories } from '../../interfaces/category.interface';
 import { CategoryService } from '../../services/category.service';
 import { Subject, map, takeUntil } from 'rxjs';
+import { AuthService } from '../../auth/services/auth.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -30,10 +31,17 @@ export class SidebarComponent implements OnInit, OnDestroy {
       path: 'categories',
     }
   ];
-  constructor(private categoryService: CategoryService) { }
+
+  isAdmin = false;
+
+  constructor(
+    private categoryService: CategoryService,
+    private authService: AuthService
+    ) { }
 
   ngOnInit(): void {
     this.getCategories();
+    this.isAdmin = this.authService.isAdmin();
   }
 
   onToggle() {

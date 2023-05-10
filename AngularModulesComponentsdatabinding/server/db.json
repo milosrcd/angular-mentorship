@@ -198,6 +198,26 @@
       },
       "role": "user",
       "id": 9
+    },
+    {
+      "firstName": "Milos",
+      "lastName": "Radosavljevic",
+      "email": "milosrcd@gmail.com",
+      "password": "11111111",
+      "countryId": 4,
+      "role": "user",
+      "createdAt": "2023-05-07T11:17:44.011Z",
+      "id": 10
+    },
+    {
+      "firstName": "Milos",
+      "lastName": "Radosavljevic",
+      "email": "milos@gmail.com",
+      "password": "12345678",
+      "countryId": 1,
+      "role": "user",
+      "createdAt": "2023-05-08T13:45:16.780Z",
+      "id": 11
     }
   ],
   "countries": [

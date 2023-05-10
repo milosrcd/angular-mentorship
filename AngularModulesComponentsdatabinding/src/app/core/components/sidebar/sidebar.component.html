@@ -38,28 +38,30 @@
             </ul>
           </div>
         </li>
-        <li>
-          <div class="sidebar-btn" (click)="onClick()">
-            <mat-icon class="sidebar-icons">verified_user</mat-icon>
-            <p routerLink="admin" class="sidebar-btn-text">Admin</p>
-            <mat-icon class="sidebar-icons" [ngClass]="{ rotate: adminValue }"
-              >chevron_right</mat-icon
-            >
-          </div>
-        </li>
-        <li>
-          <div class="sidebar-btn">
-            <ul *ngIf="adminValue">
-              <li class="categories-sidebar" *ngFor="let admin of adminList">
-                <a
-                  [routerLink]="['/admin', admin.path]"
-                  routerLinkActive="active"
-                  >{{ admin.linkName }}
-                </a>
-              </li>
-            </ul>
-          </div>
-        </li>
+        <ng-container *ngIf="isAdmin">
+          <li>
+            <div class="sidebar-btn" (click)="onClick()">
+              <mat-icon class="sidebar-icons">verified_user</mat-icon>
+              <p routerLink="admin" class="sidebar-btn-text">Admin</p>
+              <mat-icon class="sidebar-icons" [ngClass]="{ rotate: adminValue }"
+                >chevron_right</mat-icon
+              >
+            </div>
+          </li>
+          <li>
+            <div class="sidebar-btn">
+              <ul *ngIf="adminValue">
+                <li class="categories-sidebar" *ngFor="let admin of adminList">
+                  <a
+                    [routerLink]="['/admin', admin.path]"
+                    routerLinkActive="active"
+                    >{{ admin.linkName }}
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ng-container>
       </ul>
     </nav>
   </div>

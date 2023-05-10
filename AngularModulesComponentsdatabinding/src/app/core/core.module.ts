@@ -18,6 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { LayoutPageComponent } from './components/layout-page/layout-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './auth/components/register/register.component';
+import { CheckValidityPipe } from './auth/pipes/check-validity.pipe';
+import { HasErrorPipe } from './auth/pipes/has-error.pipe';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { RegisterComponent } from './auth/components/register/register.component
     NotFoundComponent,
     LoginComponent,
     LayoutPageComponent,
-    RegisterComponent
+    RegisterComponent,
+    CheckValidityPipe,
+    HasErrorPipe
   ],
   exports: [
     HeaderComponent,

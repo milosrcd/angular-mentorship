@@ -6,79 +6,70 @@
         type="text"
         formControlName="firstName"
         [ngClass]="{
-          'border-danger':
-            profileForm.controls.firstName.invalid &&
-            (profileForm.controls.firstName.dirty ||
-              profileForm.controls.firstName.touched)
+          'border-danger': profileForm.controls.firstName | checkValidity
         }"
       />
-      <span *ngIf="profileForm.controls.firstName.errors?.['required']"
+      <span *ngIf="profileForm.controls.firstName | hasError : 'required'"
         >First Name is Required</span
       >
+      <span *ngIf="profileForm.controls.firstName | hasError: 'pattern'"
+        >First Name is not in valid form</span
+      >
       <br />
-        <input
-          placeholder="Last name"
-          type="text"
-          formControlName="lastName"
-          [ngClass]="{
-            'border-danger':
-              profileForm.controls.lastName.invalid &&
-              (profileForm.controls.lastName.dirty ||
-                profileForm.controls.lastName.touched)
-          }"
-        />
-        <span *ngIf="profileForm.controls.lastName.errors?.['required']"
-          >Last Name is Required</span
-        >
+      <input
+        placeholder="Last name"
+        type="text"
+        formControlName="lastName"
+        [ngClass]="{
+          'border-danger': profileForm.controls.lastName | checkValidity
+        }"
+      />
+      <span *ngIf="profileForm.controls.lastName | hasError: 'required'"
+        >Last Name is Required</span
+      >
+      <span *ngIf="profileForm.controls.lastName | hasError: 'pattern'"
+        >Last Name is not in valid form</span
+      >
       <br />
-        <input
-          placeholder="Email"
-          type="email"
-          formControlName="email"
-          [ngClass]="{
-            'border-danger':
-              profileForm.controls.email.invalid &&
-              (profileForm.controls.email.dirty ||
-                profileForm.controls.email.touched)
-          }"
-        />
-        <span *ngIf="profileForm.controls.email.errors?.['required']"
-          >email is Required</span
-        >
-        <span *ngIf="profileForm.controls.email.errors?.['email']"
-          >Invalid email form</span
-        >
+      <input
+        placeholder="Email"
+        type="email"
+        formControlName="email"
+        [ngClass]="{
+          'border-danger': profileForm.controls.email | checkValidity
+        }"
+      />
+      <span *ngIf="profileForm.controls.email | hasError: 'required'"
+        >email is Required</span
+      >
+      <span *ngIf="profileForm.controls.email | hasError: 'required'"
+        >Invalid email form</span
+      >
       <br />
-        <input
-          placeholder="Password"
-          type="password"
-          formControlName="password"
-          [ngClass]="{
-            'border-danger':
-              profileForm.controls.password.invalid &&
-              (profileForm.controls.password.dirty ||
-                profileForm.controls.password.touched)
-          }"
-        />
-        <span *ngIf="profileForm.controls.password.errors?.['required']"
-          >password is Required</span
-        >
+      <input
+        placeholder="Password"
+        type="password"
+        formControlName="password"
+        [ngClass]="{
+          'border-danger': profileForm.controls.password | checkValidity
+        }"
+      />
+      <span *ngIf="profileForm.controls.password | hasError: 'required'"
+        >password is Required</span
+      >
       <br />
-        <input
-          placeholder="Confirm Password"
-          type="password"
-          formControlName="confirmPassword"
-          [ngClass]="{
-            'border-danger':
-              profileForm.controls.password.invalid &&
-              (profileForm.controls.password.dirty ||
-                profileForm.controls.password.touched)
-          }"
-        />
-        <br />
-        <span *ngIf="profileForm.controls.password.errors?.['required']"
-          >password is Required</span
-        >
+      <input
+        placeholder="Confirm Password"
+        type="password"
+        formControlName="confirmPassword"
+        [ngClass]="{
+          'border-danger': profileForm.controls.confirmPassword | checkValidity
+        }"
+      />
+      <br />
+      <span *ngIf="profileForm.controls.confirmPassword | hasError: 'required'"
+        >password is Required</span
+      >
       <br />
       <mat-label>Select Country:</mat-label>
       <hr />
