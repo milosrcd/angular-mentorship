@@ -7,7 +7,7 @@
         appBookBackground
         [category]="singleBook.category"
       >
-        <h2>{{ singleBook.title }}</h2>
+        <h2>{{ singleBook.title | titlecase }}</h2>
         <div class="single-book-content">
           <div class="single-book-img">
             <img [alt]="singleBook.alt" [src]="singleBook.imgSrc" />
@@ -17,8 +17,8 @@
             appBookBackground
             [category]="singleBook.category"
           >
-            <p class="single-book-id">BookID:{{ bookId }}</p>
-            <p class="bold-text">{{ singleBook.author }}</p>
+            <p class="single-book-id">BookID:{{ singleBook.id }}</p>
+            <p class="bold-text">{{ singleBook.author }}, <span>{{ singleBook.year | date: "yyyy"}}</span></p>
             <p>Contry:USA</p>
             <p>{{ singleBook.category }}</p>
             <p>ISBN:1234567890</p>
