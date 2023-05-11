@@ -18,10 +18,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { LayoutPageComponent } from './components/layout-page/layout-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './auth/components/register/register.component';
-import { CheckValidityPipe } from './auth/pipes/check-validity.pipe';
-import { HasErrorPipe } from './auth/pipes/has-error.pipe';
-import { FullNamePipe } from './auth/pipes/full-name.pipe';
-import { LowerCasePipe } from './auth/pipes/lower-case.pipe';
+import { CheckValidityPipe } from '../shared/pipes/check-validity.pipe';
+import { HasErrorPipe } from '../shared/pipes/has-error.pipe';
+import { FullNamePipe } from '../shared/pipes/full-name.pipe';
+import { LowerCasePipe } from '../shared/pipes/lower-case.pipe';
 
 
 @NgModule({

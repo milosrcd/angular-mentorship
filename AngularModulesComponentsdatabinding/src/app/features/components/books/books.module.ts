@@ -11,7 +11,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { MatDialogModule } from '@angular/material/dialog';
 import { SaveFiltersGuard } from '../../guards/save-filters.guard';
 import { ConfirmDeactivateGuardGuard } from '../../guards/confirm-deactivate-guard.guard';
-import { FullNamePipe } from 'src/app/core/auth/pipes/full-name.pipe';
+import { FullNamePipe } from 'src/app/shared/pipes/full-name.pipe';
+import { DescriptionLimitPipe } from 'src/app/shared/pipes/description-limit.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FullNamePipe } from 'src/app/core/auth/pipes/full-name.pipe';
     BooksComponent,
     SingleBookComponent,
     BookBackgroundDirective,
-    FullNamePipe
+    FullNamePipe,
+    DescriptionLimitPipe
   ],
   exports: [
   ],
