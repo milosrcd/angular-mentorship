@@ -4,10 +4,13 @@
     <img src="{{ book.imgSrc }}" alt="{{ book.title }}" class="img" />
     <div class="description">
       <h4 class="author">
-        {{ book | fullName }}, <span>{{ book.year | date : "yyyy" }}</span>
+        {{ book | fullName | titlecase }},
+        <span>{{ book.year | date : "yyyy" }}</span>
       </h4>
       <p class="book-category">{{ book.category }}</p>
-      <p class="book-description">{{ book.description | descriptionLimit : 56 }}</p>
+      <p class="book-description">
+        {{ book.description | descriptionLimit : 56 }}
+      </p>
       <a class="book-btn" [routerLink]="['/book', book.id]">Book Overview</a>
       <br />
       <a class="book-btn" (click)="onDelete()">Delete</a>

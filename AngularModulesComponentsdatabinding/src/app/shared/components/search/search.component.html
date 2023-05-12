@@ -1,8 +1,9 @@
-<div class="search" appBorderColor>
+<div class="search" [appBorderColor]="search.value">
   <input
     type="text"
     title="Search"
     placeholder="Search by Book Name"
+    #search
     id="searcBooks"
     [(ngModel)]="defaultValue"
     [value]="defaultValue | lowercase"

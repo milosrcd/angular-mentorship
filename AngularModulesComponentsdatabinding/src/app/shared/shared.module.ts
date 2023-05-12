@@ -10,7 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { HeadlineComponent } from './components/headline/headline.component';
-import { BorderColorDirective } from './components/directives/border-color.directive';
+import { BorderColorDirective } from './directives/border-color.directive';
 
 @NgModule({
   declarations: [
