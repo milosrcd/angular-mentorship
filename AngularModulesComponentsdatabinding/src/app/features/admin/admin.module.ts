@@ -8,11 +8,13 @@ import { AdminBookComponent } from './components/admin-book/admin-book.component
 import { MatDialogModule } from '@angular/material/dialog';
 import { ReadMoreComponent } from './components/read-more/read-more.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { BooksTableComponent } from './components/books-table/books-table.component';
 
 @NgModule({
   declarations: [
     AdminBookComponent,
     ReadMoreComponent,
+    BooksTableComponent,
   ],
   imports: [
     CommonModule,

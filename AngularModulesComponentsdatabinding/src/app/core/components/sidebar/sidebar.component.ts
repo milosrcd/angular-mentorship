@@ -1,10 +1,10 @@
-import { AdminLink } from './../../interfaces/admin-link.interface';
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subject, takeUntil } from 'rxjs';
 import { Admin } from 'src/app/features/models/admin.enum';
+import { AuthService } from '../../auth/services/auth.service';
 import { Categories } from '../../interfaces/category.interface';
 import { CategoryService } from '../../services/category.service';
-import { Subject, map, takeUntil } from 'rxjs';
-import { AuthService } from '../../auth/services/auth.service';
+import { AdminLink } from './../../interfaces/admin-link.interface';
 
 @Component({
   selector: 'app-sidebar',

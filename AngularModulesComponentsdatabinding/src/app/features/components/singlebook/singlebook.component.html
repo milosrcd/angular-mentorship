@@ -18,7 +18,10 @@
             [category]="singleBook.category"
           >
             <p class="single-book-id">BookID:{{ singleBook.id }}</p>
-            <p class="bold-text">{{ singleBook | fullName}}, <span>{{ singleBook.year | date: "yyyy"}}</span></p>
+            <p class="bold-text">
+              {{ singleBook | fullName | titlecase }},
+              <span>{{ singleBook.year | date : "yyyy" }}</span>
+            </p>
             <p>Contry:USA</p>
             <p>{{ singleBook.category }}</p>
             <p>ISBN:1234567890</p>

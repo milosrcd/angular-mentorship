@@ -6,14 +6,12 @@ import { BookDetails } from 'src/app/features/models/book-details.model';
 import { BookService } from 'src/app/features/services/book.service';
 import { ReadMoreComponent } from '../read-more/read-more.component';
 
-
-
 @Component({
-  selector: 'app-admin-book',
-  templateUrl: './admin-book.component.html',
-  styleUrls: ['./admin-book.component.scss']
+  selector: 'app-books-table',
+  templateUrl: './books-table.component.html',
+  styleUrls: ['./books-table.component.scss']
 })
-export class AdminBookComponent implements OnInit, OnDestroy {
+export class BooksTableComponent implements OnInit, OnDestroy {
   displayedColumns: string[] = ['imgSrc', 'title', 'author', 'isbn', 'year', 'category', 'description', 'review', 'bookOverview'];
   columns = [
     {
@@ -80,15 +78,15 @@ export class AdminBookComponent implements OnInit, OnDestroy {
   }
 
   readMore(book: BookDetails): void {
-    this.dialog.open(ReadMoreComponent,{
+    this.dialog.open(ReadMoreComponent, {
       minHeight: '400px',
       width: '30%',
       data: book,
     })
-    .afterClosed()
-    .subscribe((data: any) => {
-      console.log(data);
-    })
+      .afterClosed()
+      .subscribe((data: any) => {
+        console.log(data);
+      })
   }
 
   private getBooks() {

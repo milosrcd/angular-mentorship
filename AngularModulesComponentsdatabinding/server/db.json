@@ -10,6 +10,7 @@
       "isbn": 1234,
       "year": "1.4.1987",
       "category": "General",
+      "review": "review/reviewer",
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim",
       "deletedAt": null
     },
@@ -23,6 +24,7 @@
       "isbn": 1234,
       "year": "4.1.1987",
       "category": "General",
+      "review": "review/reviewer",
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim",
       "deletedAt": null
     },
@@ -36,6 +38,7 @@
       "isbn": 1234,
       "year": "10.12.2000",
       "category": "General",
+      "review": "review/reviewer",
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim",
       "deletedAt": null
     },
@@ -49,6 +52,7 @@
       "isbn": 1234,
       "year": "12.2.1956",
       "category": "History",
+      "review": "review/reviewer",
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim",
       "deletedAt": null
     },
@@ -62,6 +66,7 @@
       "isbn": 1234,
       "year": "3.2.1941",
       "category": "Fantasy",
+      "review": "review/reviewer",
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim",
       "deletedAt": null
     },
@@ -75,6 +80,7 @@
       "isbn": 1234,
       "year": "6.6.1966",
       "category": "Literary",
+      "review": "review/reviewer",
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iure facere molestiae ducimus commodi dignissimos corrupti accusantium deserunt minima enim",
       "deletedAt": null
     }
